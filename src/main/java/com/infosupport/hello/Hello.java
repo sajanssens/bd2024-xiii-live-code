@@ -7,7 +7,7 @@ public class Hello {
     }
 
     public static void eenAndereFunctie() {
-        System.out.println("eenAndereFunctie Hello world! ");
+        System.out.println("Hello world! ");
     }
 }
 
