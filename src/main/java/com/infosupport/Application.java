@@ -25,6 +25,9 @@ public class Application {
 
         // kebab-case-looks-like-this
         // snake_case_is_this
+
+        int som = Opteller.som(1, 2);
+        System.out.println(som);
     }
 
     // This is Javadoc:
