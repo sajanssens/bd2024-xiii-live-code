@@ -1,4 +1,4 @@
-package com.infosupport.h3types;
+package com.infosupport.h3;
 
 public class TypesDemo {
     public static void main(String[] args) {
