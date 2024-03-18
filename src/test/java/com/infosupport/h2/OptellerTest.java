@@ -1,5 +1,6 @@
-package com.infosupport;
+package com.infosupport.h2;
 
+import com.infosupport.h2.Opteller;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

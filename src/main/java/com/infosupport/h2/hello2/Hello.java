@@ -1,4 +1,4 @@
-package com.infosupport.hello2;
+package com.infosupport.h2.hello2;
 
 public class Hello {
 

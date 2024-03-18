@@ -1,13 +1,15 @@
-package com.infosupport;
+package com.infosupport.h2;
 
-import com.infosupport.hello.Hello;
+import com.infosupport.h2.hello2.Hello;
 
-import static com.infosupport.hello.Hello.eenAndereFunctie;
+import static com.infosupport.h2.hello.Hello.eenAndereFunctie;
 import static java.lang.String.format;
 
 public class Application {
 
     public static void main(String[] args) {
+        Opteller.som(1, 2);
+
         System.out.println("Hello world!");
 
         // formatting strings:
@@ -17,9 +19,9 @@ public class Application {
         System.out.printf("Hello world %s!", name);
 
         // calling other functions:
-        Hello.eenFunctie();
+        com.infosupport.h2.hello.Hello.eenFunctie();
         eenAndereFunctie(); // use static imported function
-        com.infosupport.hello2.Hello.hello(); // fully qualified name needed
+        Hello.hello(); // fully qualified name needed
 
         int abs = Math.abs(-2);
 
