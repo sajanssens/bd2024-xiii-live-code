@@ -24,7 +24,7 @@ public class Person {
         }
     }
 
-    public void addShoe(Shoe newShoe) {
+    public void add(Shoe newShoe) {
         this.shoes.add(newShoe);
     }
 }

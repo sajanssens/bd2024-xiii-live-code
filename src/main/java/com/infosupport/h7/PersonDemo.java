@@ -1,5 +1,8 @@
 package com.infosupport.h7;
 
+import com.infosupport.h7.bank.Account;
+import com.infosupport.h7.bank.Bank;
+
 public class PersonDemo {
 
     public static void main(String[] args) {
@@ -20,9 +23,9 @@ public class PersonDemo {
 
         p.setDwb(new Laptop(999));
 
-        p.addShoe(new Shoe(42));
-        p.addShoe(new Shoe(44));
-        p.addShoe(new Shoe(41));
+        p.add(new Shoe(42));
+        p.add(new Shoe(44));
+        p.add(new Shoe(41));
 
         System.out.println(p);
     }
