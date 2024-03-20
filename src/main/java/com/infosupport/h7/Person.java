@@ -1,8 +1,8 @@
 package com.infosupport.h7;
 
 import lombok.Data;
+import lombok.Setter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -14,7 +14,8 @@ public class Person {
     private Laptop dbo;
     private Laptop dwb;
 
-    private List<Shoe> shoes = new ArrayList<>();
+    private ShoeManager shoeManager = new ShoeManager();
+    private int footSize;
     // private Shoe[] shoesToo = new Shoe[10];
 
     public void setAge(int age) {
@@ -25,6 +26,16 @@ public class Person {
     }
 
     public void add(Shoe newShoe) {
-        this.shoes.add(newShoe);
+        if (this.footSize == newShoe.getSize()) {
+            this.shoeManager.add(newShoe);
+        }
+    }
+
+    public List<Shoe> find(String brand) {
+        if (brand.startsWith("Dr.")) {
+            return this.shoeManager.find(brand);
+        }
+
+        return List.of();
     }
 }

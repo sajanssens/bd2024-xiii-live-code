@@ -7,4 +7,5 @@ import lombok.Data;
 @AllArgsConstructor
 public class Shoe {
     private int size;
+    private String brand;
 }

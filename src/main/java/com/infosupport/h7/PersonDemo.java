@@ -23,9 +23,9 @@ public class PersonDemo {
 
         p.setDwb(new Laptop(999));
 
-        p.add(new Shoe(42));
-        p.add(new Shoe(44));
-        p.add(new Shoe(41));
+        p.add(new Shoe(42, ""));
+        p.add(new Shoe(44, ""));
+        p.add(new Shoe(41, ""));
 
         System.out.println(p);
     }
