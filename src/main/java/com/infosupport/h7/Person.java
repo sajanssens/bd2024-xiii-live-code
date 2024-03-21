@@ -35,7 +35,7 @@ public class Person {
         return false;
     }
 
-    public List<Shoe> find(String brand) {
+    public List<Shoe> findDr(String brand) {
         if (brand.startsWith("Dr.")) {
             return this.shoeManager.find(brand);
         }
