@@ -1,7 +1,6 @@
 package com.infosupport.h7;
 
 import lombok.Data;
-import lombok.Setter;
 
 import java.util.List;
 
@@ -25,10 +24,15 @@ public class Person {
         }
     }
 
-    public void add(Shoe newShoe) {
+    private void setShoeManager(ShoeManager shoeManager) {
+        this.shoeManager = shoeManager;
+    }
+
+    public boolean fit(Shoe newShoe) {
         if (this.footSize == newShoe.getSize()) {
-            this.shoeManager.add(newShoe);
+            return this.shoeManager.add(newShoe);
         }
+        return false;
     }
 
     public List<Shoe> find(String brand) {
