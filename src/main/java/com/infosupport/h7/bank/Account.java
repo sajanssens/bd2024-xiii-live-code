@@ -1,11 +1,9 @@
 package com.infosupport.h7.bank;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
 @Data
-@AllArgsConstructor
 @Builder
 public class Account {
     private String iban;    // TODO use Iban value type
