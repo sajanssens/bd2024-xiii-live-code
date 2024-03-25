@@ -11,4 +11,18 @@
 
     <artifactId>blok1</artifactId>
 
+    <dependencies>
+        <!-- CDI specification:  -->
+        <dependency>
+            <groupId>jakarta.enterprise</groupId>
+            <artifactId>jakarta.enterprise.cdi-api</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+        <!-- CDI implementation:  -->
+        <dependency>
+            <groupId>org.jboss.weld.se</groupId>
+            <artifactId>weld-se-core</artifactId>
+            <version>5.1.2.Final</version>
+        </dependency>
+    </dependencies>
 </project>
