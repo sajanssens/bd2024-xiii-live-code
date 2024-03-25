@@ -1,7 +1,7 @@
-package com.infosupport.h7.mvcexample.boundary;
+package com.infosupport.mvcdemo.boundary;
 
-import static com.infosupport.h7.mvcexample.App.readLine;
-import static com.infosupport.h7.mvcexample.boundary.Registratiescherm.registratiescherm;
+import static com.infosupport.mvcdemo.App.readLine;
+import static com.infosupport.mvcdemo.boundary.Registratiescherm.registratiescherm;
 
 public class Hoofdscherm implements Boundary {
 
@@ -37,6 +37,5 @@ public class Hoofdscherm implements Boundary {
                 System.out.println("Tot ziens.");
             }
         }
-
     }
 }

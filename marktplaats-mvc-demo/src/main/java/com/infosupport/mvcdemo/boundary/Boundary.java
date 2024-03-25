@@ -1,4 +1,4 @@
-package com.infosupport.h7.mvcexample.boundary;
+package com.infosupport.mvcdemo.boundary;
 
 public interface Boundary {
     void start();

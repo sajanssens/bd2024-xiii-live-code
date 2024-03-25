@@ -1,11 +1,13 @@
-package com.infosupport.h7.mvcexample.boundary;
+package com.infosupport.mvcdemo.boundary;
 
-import com.infosupport.h7.mvcexample.domain.Bezorgwijze;
-import com.infosupport.h7.mvcexample.domain.Gebruiker;
+import com.infosupport.mvcdemo.domain.Bezorgwijze;
+import com.infosupport.mvcdemo.domain.Gebruiker;
 
 import java.util.List;
 
-import static com.infosupport.h7.mvcexample.App.*;
+import static com.infosupport.mvcdemo.App.bwDao;
+import static com.infosupport.mvcdemo.App.prompt;
+import static com.infosupport.mvcdemo.App.readLine;
 
 public class Registratiescherm implements Boundary {
 

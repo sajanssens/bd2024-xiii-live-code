@@ -1,6 +1,6 @@
-package com.infosupport.h7.mvcexample.dao;
+package com.infosupport.mvcdemo.dao;
 
-import com.infosupport.h7.mvcexample.domain.Bezorgwijze;
+import com.infosupport.mvcdemo.domain.Bezorgwijze;
 
 import java.util.Arrays;
 import java.util.List;

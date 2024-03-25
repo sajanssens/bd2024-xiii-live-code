@@ -1,7 +1,7 @@
-package com.infosupport.h7.mvcexample;
+package com.infosupport.mvcdemo;
 
-import com.infosupport.h7.mvcexample.boundary.Hoofdscherm;
-import com.infosupport.h7.mvcexample.dao.BezorgwijzeDao;
+import com.infosupport.mvcdemo.boundary.Hoofdscherm;
+import com.infosupport.mvcdemo.dao.BezorgwijzeDao;
 
 import java.util.Scanner;
 
@@ -18,5 +18,4 @@ public class App {
     }
 
     public static void main(String[] args) { new Hoofdscherm().start(); }
-
 }

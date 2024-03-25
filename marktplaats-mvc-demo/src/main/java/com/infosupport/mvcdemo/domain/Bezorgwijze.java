@@ -1,4 +1,4 @@
-package com.infosupport.h7.mvcexample.domain;
+package com.infosupport.mvcdemo.domain;
 
 public enum Bezorgwijze {
 
