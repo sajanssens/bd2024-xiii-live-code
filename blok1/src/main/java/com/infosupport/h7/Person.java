@@ -1,10 +1,11 @@
 package com.infosupport.h7;
 
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
-@Data
+@Data @RequiredArgsConstructor
 public class Person {
     private String name;
     private int age;
@@ -15,11 +16,16 @@ public class Person {
 
     private ShoeManager shoeManager = new ShoeManager();
     private int footSize;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
     // private Shoe[] shoesToo = new Shoe[10];
 
     public void setAge(int age) {
         if (age < 130) {
-            this.age = age;
+            // this.age = age;
             System.out.println("Age is veranderd");
         }
     }
