@@ -31,5 +31,11 @@ public class StreamDemo {
                 .mapToObj(i -> new Person(fake.name().fullName(), i))
                 .limit(100)
                 .forEach(System.out::println);
+
+        new StreamDemo().average(1, 2, 3, 4);
+    }
+
+    public double average(int value, int... is) {
+        return 1;
     }
 }
