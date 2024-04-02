@@ -34,6 +34,21 @@ public class LambdaDemo {
 
         selecteer(people, p -> p.getName().startsWith("A"));
         selecteer(people, p -> p.getName().startsWith("A") && p.getAge() >= 18 && p.getAge() <= 65);
+
+        // ... as anonymous inner class
+        Predicate<Person> pensioenGerechtigd = new Predicate<Person>() {
+            @Override
+            public boolean test(Person person) {
+                return person.getAge() <= 67;
+            }
+        };
+
+        // ... as non-anonymous class
+        PensioenGerechtigd pensioenGerechtigdNotAnonymous = new PensioenGerechtigd();
+
+        // all the same...
+        selecteer(people, pensioenGerechtigd);
+        selecteer(people, pensioenGerechtigdNotAnonymous);
     }
 
     public List<Person> selecteerOpLeeftijd(List<Person> people) {
@@ -64,5 +79,12 @@ public class LambdaDemo {
             }
         }
         return selectie;
+    }
+}
+
+class PensioenGerechtigd implements Predicate<Person> {
+    @Override
+    public boolean test(Person person) {
+        return person.getAge() <= 67;
     }
 }
