@@ -6,7 +6,7 @@ import lombok.RequiredArgsConstructor;
 import java.util.List;
 
 @Data @RequiredArgsConstructor
-public class Person {
+public class Person extends Human {
     private String name;
     private int age;
 
