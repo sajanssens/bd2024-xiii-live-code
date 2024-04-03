@@ -16,27 +16,34 @@ public class LambdaDemo {
         IntFunction<Integer> f = x -> x * x;
         Consumer<Integer> c = (Integer i) -> System.out.println(i);
 
-        double result = f.apply(2);
+        double square = f.apply(2);
         long round = Math.round(1.2);
 
         people.stream()
                 .map(p -> p.getAge())
                 .forEach(a -> System.out.println(a));
 
-        List<Person> resultToo =
+        List<Person> result;
+
+        result =
                 selecteer(people,
-                        p -> {
+                        p -> { // a lambda can contain multiple statements:
                             System.out.println(p);
                             System.out.println("Hello");
                             return p.getAge() >= 18;
                         }
                 );
 
-        selecteer(people, p -> p.getName().startsWith("A"));
-        selecteer(people, p -> p.getName().startsWith("A") && p.getAge() >= 18 && p.getAge() <= 65);
+        result = selecteer(people, p -> p.getName().startsWith("A"));
+        result = selecteer(people, p -> p.getName().startsWith("A") && p.getAge() >= 18 && p.getAge() <= 65);
+
+        // Variable behaviour:
+
+        // As lambda:
+        Predicate<Person> pensioenGerechtigd = person -> person.getAge() <= 67;
 
         // ... as anonymous inner class
-        Predicate<Person> pensioenGerechtigd = new Predicate<Person>() {
+        Predicate<Person> pensioenGerechtigdAnonymous = new Predicate<Person>() {
             @Override
             public boolean test(Person person) {
                 return person.getAge() <= 67;
@@ -46,9 +53,10 @@ public class LambdaDemo {
         // ... as non-anonymous class
         PensioenGerechtigd pensioenGerechtigdNotAnonymous = new PensioenGerechtigd();
 
-        // all the same...
-        selecteer(people, pensioenGerechtigd);
-        selecteer(people, pensioenGerechtigdNotAnonymous);
+        // It's all the same...!
+        result = selecteer(people, pensioenGerechtigd);
+        result = selecteer(people, pensioenGerechtigdAnonymous);
+        result = selecteer(people, pensioenGerechtigdNotAnonymous);
     }
 
     public List<Person> selecteerOpLeeftijd(List<Person> people) {
