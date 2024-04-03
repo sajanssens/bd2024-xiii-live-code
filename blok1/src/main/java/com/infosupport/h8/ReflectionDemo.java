@@ -7,7 +7,6 @@ import java.lang.reflect.Method;
 
 public class ReflectionDemo {
     public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
-        Person p = new Person("Bram", 90);
         Class<Person> personClass = Person.class;
 
         System.out.println("Declared Methods : -----------------");
@@ -15,6 +14,7 @@ public class ReflectionDemo {
             System.out.println(method.getName());
         }
 
+        Person p = new Person("Bram", 90);
         System.out.println("Declared Fields : -----------------");
         for (Field f : p.getClass().getDeclaredFields()) {
             System.out.println(f.getName());
@@ -22,9 +22,10 @@ public class ReflectionDemo {
 
         System.out.println("Before hacking:" + p);
 
-        Field name = p.getClass().getDeclaredField("name");
+        Field name = personClass.getDeclaredField("name");
         name.setAccessible(true);
-        name.set(p, "HACKIEHACKIE");
+        // p.name = "HACKIEHACKIE"; // not allowed
+        name.set(p, "HACKIEHACKIE");// allowed!
 
         System.out.println("After hacking:" + p);
     }
