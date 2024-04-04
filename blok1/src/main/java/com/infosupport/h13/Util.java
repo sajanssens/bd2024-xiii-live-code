@@ -41,8 +41,8 @@ public class Util {
         list.add(new Trainer());
     }
 
-    public static void verwerkSafeCovariant(List<? extends Person> list) {
-        Person p = list.get(0); // PRODUCE
+    public static void verwerkSafeCovariant(List<? extends Person> outputList) {
+        Person p = outputList.get(0); // PRODUCE
 
         if (p instanceof Trainee t) {
             String rank = t.rank;
@@ -51,7 +51,7 @@ public class Util {
         // list.add(new Trainee());
     }
 
-    public static void verwerkSafeContravariant(List<? super Person> list) {
+    public static void verwerkSafeContravariant(List<? super Person> inputList) {
         // Person p = list.get(0);
 
         // if (p instanceof Trainee t) {
@@ -59,8 +59,8 @@ public class Util {
         // }
 
         // Consume:
-        list.add(new Trainee());
+        inputList.add(new Trainee());
         // list.add(new Human());
-        list.add(new Person());
+        inputList.add(new Person());
     }
 }
