@@ -1,8 +1,8 @@
 package com.infosupport.utjava.tdd;
 
-public class Faculty {
+public class Factorial {
 
-    private Faculty() { }
+    private Factorial() { }
 
     public static long fac(int n) {
         if (n < 0) {

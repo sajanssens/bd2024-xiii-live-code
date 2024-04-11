@@ -35,10 +35,10 @@ public class Application {
     // This is Javadoc:
 
     /**
-     * Method calculates the faculty
+     * Method calculates the factorial
      *
      * @param n the number to calculate
-     * @return the faculty of n
+     * @return the factorial of n
      */
     public static long fac(int n) {
         // ...
