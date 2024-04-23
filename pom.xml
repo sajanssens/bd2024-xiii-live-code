@@ -12,6 +12,7 @@
     <modules>
         <module>blok1</module>
         <module>marktplaats-mvc-demo</module>
+        <module>blok2</module>
     </modules>
 
     <properties>
@@ -50,6 +51,17 @@
             <artifactId>lombok</artifactId>
             <version>1.18.30</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
+            <version>2.20.0</version>
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 
