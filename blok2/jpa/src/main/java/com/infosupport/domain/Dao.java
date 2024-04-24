@@ -14,6 +14,10 @@ public abstract class Dao {
 
     public Dao(EntityManager em) { this.em = em; }
 
+    public <T> void consumeTransaction(Runnable anEntityManagerAction) {
+        performTransaction((T x) -> { anEntityManagerAction.run(); return x; }, null);
+    }
+
     public <T> void consumeTransaction(Consumer<T> anEntityManagerAction, T victim) {
         performTransaction(x -> { anEntityManagerAction.accept(x); return x; }, victim);
     }

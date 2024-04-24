@@ -25,4 +25,14 @@ public class EmployeeDao extends Dao {
                 .setParameter("n", name)
                 .getResultList();
     }
+
+    public List<Employee> findWithNamedQueryBy(String name) {
+        return em.createNamedQuery("Employee.findByName", Employee.class)
+                .setParameter("n", name)
+                .getResultList();
+    }
+
+    public void deleteAll() {
+        consumeTransaction(() -> em.createQuery("DELETE Employee e").executeUpdate());
+    }
 }

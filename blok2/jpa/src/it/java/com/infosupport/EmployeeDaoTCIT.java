@@ -16,11 +16,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class EmployeeDaoTCIT {
 
-    static MySQLContainer<?> mySQLContainer = new MySQLContainer<>("mysql:latest");
-
-    private final EntityManager em = Persistence.createEntityManagerFactory("MySQL").createEntityManager();
-
-    private final EmployeeDao dao = new EmployeeDao(em);
+    private static MySQLContainer<?> mySQLContainer = new MySQLContainer<>("mysql:latest");
+    private static final EntityManager em = Persistence.createEntityManagerFactory("MySQL").createEntityManager();
+    private static final EmployeeDao dao = new EmployeeDao(em);
 
     @BeforeAll
     static void beforeAll() {
@@ -29,7 +27,9 @@ class EmployeeDaoTCIT {
 
     @AfterAll
     static void afterAll() {
+        dao.deleteAll();
         mySQLContainer.stop();
+        mySQLContainer.close();
     }
 
     @Test
@@ -37,7 +37,7 @@ class EmployeeDaoTCIT {
         dao.create(new Employee("Baby", LocalDate.now(), 20));
         List<Employee> emps = dao.findBy("Baby");
 
-        // assertThat(emps.size()).isEqualTo(1);
+        assertThat(emps.size()).isEqualTo(1);
         assertThat(emps.getFirst().getName()).isEqualTo("Baby");
     }
 }
