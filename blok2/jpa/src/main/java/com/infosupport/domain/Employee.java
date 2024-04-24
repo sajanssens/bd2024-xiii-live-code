@@ -29,4 +29,8 @@ public class Employee {
         this.birthdate = birthdate;
         this.shoeSize = shoeSize;
     }
+
+    public String getName() {
+        return name;
+    }
 }

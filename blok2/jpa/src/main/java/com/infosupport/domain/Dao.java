@@ -1,28 +1,34 @@
 package com.infosupport.domain;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityTransaction;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
 
 @Slf4j
-public class Dao {
+public abstract class Dao {
 
-    public static <T> void consumeTransaction(EntityManager em, Consumer<T> anEntityManagerAction, T victim) {
-        performTransaction(em, x -> { anEntityManagerAction.accept(x); return x; }, victim);
+    protected final EntityManager em;
+
+    public Dao(EntityManager em) { this.em = em; }
+
+    public <T> void consumeTransaction(Consumer<T> anEntityManagerAction, T victim) {
+        performTransaction(x -> { anEntityManagerAction.accept(x); return x; }, victim);
     }
 
-    public static  <T> T performTransaction(EntityManager em, Function<T, T> anEntityManagerAction, T victim) {
+    public <T> T performTransaction(Function<T, T> anEntityManagerAction, T victim) {
         T result = null;
 
+        EntityTransaction tx = em.getTransaction();
         try {
-            em.getTransaction().begin();
+            tx.begin();
             result = anEntityManagerAction.apply(victim);
-            em.getTransaction().commit();
+            tx.commit();
         } catch (Exception ex) {
-            em.getTransaction().rollback();
-            log.error(ex.getMessage(), ex);
+            tx.rollback();
+            log.error("Something bad happened. Rolling back... " + ex.getMessage(), ex);
         }
 
         return result;
