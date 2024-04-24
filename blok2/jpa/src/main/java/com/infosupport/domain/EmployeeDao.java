@@ -5,6 +5,8 @@ import jakarta.persistence.EntityTransaction;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 @Slf4j
 public class EmployeeDao {
@@ -15,55 +17,37 @@ public class EmployeeDao {
         this.em = em;
     }
 
-    public void create(Employee e) {
-        log.info("Employee before save is " + (em.contains(e) ? "" : "not ") + "managed.");
+    public void create(Employee emp) { consumeTransaction(em::persist, emp); }
 
-        EntityTransaction transaction = em.getTransaction();
-        try {
-            transaction.begin();
-            em.persist(e);
-            log.info("Employee after persist is " + (em.contains(e) ? "" : "not ") + "managed.");
-            transaction.commit();
-        } catch (Exception ex) {
-            transaction.rollback();
-            log.error(ex.getMessage(), ex);
-        }
-        log.info("Employee after save is " + (em.contains(e) ? "" : "not ") + "managed.");
-    }
+    public Employee read(int id) { return em.find(Employee.class, id); }
 
-    public Employee read(int id) {
-        return em.find(Employee.class, id);
-    }
+    public Employee update(Employee e) { return performTransaction(em::merge, e); }
 
-    public Employee update(Employee e) {
-        Employee mergedE = e;
-        EntityTransaction transaction = em.getTransaction();
-        try {
-            transaction.begin();
-            mergedE = em.merge(e);
-            transaction.commit();
-        } catch (Exception ex) {
-            transaction.rollback();
-            log.error(ex.getMessage(), ex);
-        }
-        return mergedE;
-    }
-
-    public void delete(Employee e) {
-        EntityTransaction transaction = em.getTransaction();
-        try {
-            transaction.begin();
-            em.remove(e);
-            transaction.commit();
-        } catch (Exception ex) {
-            transaction.rollback();
-            log.error(ex.getMessage(), ex);
-        }
-    }
+    public void delete(Employee e) { consumeTransaction(em::remove, e); }
 
     public List<Employee> findBy(String name) {
         return em.createQuery("select e from Employee e where e.name = :n", Employee.class)
                 .setParameter("n", name)
                 .getResultList();
+    }
+
+    private void consumeTransaction(Consumer<Employee> anEntityManagerAction, Employee victim) {
+        performTransaction(x -> { anEntityManagerAction.accept(x); return x; }, victim);
+    }
+
+    private Employee performTransaction(Function<Employee, Employee> anEntityManagerAction, Employee victim) {
+        EntityTransaction transaction = em.getTransaction();
+        Employee result = null;
+
+        try {
+            transaction.begin();
+            result = anEntityManagerAction.apply(victim);
+            transaction.commit();
+        } catch (Exception ex) {
+            transaction.rollback();
+            log.error(ex.getMessage(), ex);
+        }
+
+        return result;
     }
 }
