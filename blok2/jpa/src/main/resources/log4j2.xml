@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
     <Properties>
-        <property name="logpattern">%highlight{[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1.} - %msg%n}{FATAL=red blink, ERROR=red, WARN=yellow bold, INFO=WHITE, DEBUG=green bold, TRACE=blue}
+        <Property name="pattern_level_colors">
+            FATAL=bold magenta, ERROR=red, WARN=yellow bold, INFO=WHITE, DEBUG=green bold, TRACE=blue
+        </Property>
+        <property name="logpattern">
+            %highlight{[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n}{${pattern_level_colors}}
         </property>
     </Properties>
 
@@ -15,7 +19,7 @@
                 <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
             </PatternLayout>
             <Policies>
-                <TimeBasedTriggeringPolicy />
+                <TimeBasedTriggeringPolicy/>
                 <SizeBasedTriggeringPolicy size="250 MB"/>
             </Policies>
         </RollingFile>
@@ -27,8 +31,9 @@
             <AppenderRef ref="console"/>
             <AppenderRef ref="rolling-file"/>
         </Root>
-        <!-- for everything from com.infosupport -->
-        <Logger name="com.infosupport.logging.special" level="DEBUG"/>
-        <Logger name="com.github.javafaker" level="TRACE"/>
+
+        <Logger name="org.hibernate.SQL" level="DEBUG"/>
+        <!--<Logger name="org.hibernate.SQL_SLOW" level="DEBUG"/>-->
+        <Logger name="org.hibernate.orm.jdbc.bind" level="TRACE"/>
     </Loggers>
 </Configuration>

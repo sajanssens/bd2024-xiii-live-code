@@ -21,7 +21,7 @@ public class App {
         EmployeeDao employeeDao = new EmployeeDao(em);
 
         Employee bram = new Employee("Bram", LocalDate.of(1979, 8, 22), 43);
-        employeeDao.save(bram);
+        employeeDao.create(bram);
 
         em.close();
         mySQL.close();
