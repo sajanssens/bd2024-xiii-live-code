@@ -39,6 +39,12 @@
             <version>2.2.224</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>mysql</artifactId>
+            <version>1.19.7</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -64,6 +70,7 @@
                 <artifactId>build-helper-maven-plugin</artifactId>
                 <version>3.5.0</version>
                 <executions>
+                    <!-- add src/it/.. to maven for integration tests-->
                     <execution>
                         <id>add-source</id>
                         <phase>generate-sources</phase>
