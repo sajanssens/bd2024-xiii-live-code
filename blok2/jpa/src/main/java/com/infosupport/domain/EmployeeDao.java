@@ -35,4 +35,18 @@ public class EmployeeDao extends Dao {
     public void deleteAll() {
         consumeTransaction(() -> em.createQuery("DELETE Employee e").executeUpdate());
     }
+
+    public List<Laptop> findLaptopsOf(long id) {
+        return em.createQuery("select l from Laptop l where l.employee.id = :i ", Laptop.class)
+                .setParameter("i", id)
+                .getResultList();
+    }
+
+    public Employee findWithLaptops(long id) {
+        return em.createQuery("select e from Employee e join fetch e.laptops where e.id = :i ", Employee.class)
+                .setParameter("i", id)
+                .getSingleResult();
+    }
+
+
 }
