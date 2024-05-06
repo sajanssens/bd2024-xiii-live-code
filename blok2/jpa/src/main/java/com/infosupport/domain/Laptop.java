@@ -1,5 +1,6 @@
 package com.infosupport.domain;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,7 +22,7 @@ public class Laptop {
 
     private String brand;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Employee employee;
 
 }
