@@ -33,6 +33,7 @@ public abstract class Dao {
         } catch (Exception ex) {
             tx.rollback();
             log.error("Something bad happened. Rolling back... " + ex.getMessage(), ex);
+            throw ex;
         }
 
         return result;

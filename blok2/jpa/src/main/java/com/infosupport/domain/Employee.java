@@ -1,6 +1,5 @@
 package com.infosupport.domain;
 
-import jakarta.persistence.Basic;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,6 +10,9 @@ import jakarta.persistence.NamedQueries;
 import jakarta.persistence.NamedQuery;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.PastOrPresent;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -36,9 +38,11 @@ public class Employee {
     private long id;
 
     private String name;
+
+    @PastOrPresent
     private LocalDate birthdate;
 
-    @Basic(optional = false)
+    @Min(10) @Max(55)
     private int shoeSize = 42;
 
     @EqualsAndHashCode.Exclude

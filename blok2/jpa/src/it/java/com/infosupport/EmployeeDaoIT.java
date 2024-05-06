@@ -4,15 +4,18 @@ import com.infosupport.domain.Employee;
 import com.infosupport.domain.EmployeeDao;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Persistence;
+import jakarta.validation.ConstraintViolationException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.time.temporal.TemporalAmount;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class EmployeeDaoIT {
+class EmployeeDaoIT {
 
     private static final EntityManager em = Persistence.createEntityManagerFactory("H2").createEntityManager();
 
@@ -33,5 +36,11 @@ public class EmployeeDaoIT {
 
         assertThat(emps.size()).isEqualTo(1);
         assertThat(emps.getFirst().getName()).isEqualTo("Baby");
+    }
+
+    @Test
+    void createOnInvalidEmployeeThrowsValidationException() {
+        assertThrows(ConstraintViolationException.class, () -> dao.create(new Employee("Baby", LocalDate.now(), 9)));
+        assertThrows(ConstraintViolationException.class, () -> dao.create(new Employee("Baby", LocalDate.now().plusDays(1), 9)));
     }
 }
