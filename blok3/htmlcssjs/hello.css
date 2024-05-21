@@ -1,0 +1,39 @@
+body {
+    position: absolute;
+}
+
+p {
+    font-style: italic;
+}
+
+#div1, #div2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+#div1 {
+    top: 120px;
+    left: 20px;
+    background-color: blue;
+}
+
+#div2 {
+    top: 100px;
+    left: 60px;
+    background-color: orange;
+}
+#container {
+    position: relative;
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
+#some-div {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    width: 60px;
+    height: 30px;
+    background-color: orange;
+}
