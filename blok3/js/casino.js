@@ -1,5 +1,6 @@
 // @ts-check
 class Person {
+
     /**
      * @param {string} name
      */
@@ -15,18 +16,19 @@ class Player extends Person {
      * @param {number} chips
      */
     constructor(name, chips) {
+        super(name);
         this.chips = chips;
     }
 
     toString() {
-        return `${this.name} has ${chips} number of chips left`;
+        return `${this._name} has ${this.chips} number of chips left`;
     }
 }
 
 var playerOne = new Player('Han', 46);
 var playerTwo = new Player('Leia', 68);
 
-var highestNumberOfChips = Math.max([playerOne.chips, playerTwo.chips]);
+var highestNumberOfChips = Math.max(playerOne.chips, playerTwo.chips);
 console.log(highestNumberOfChips + ' is the highest number of chips');
 
 class RouletteBoard {
@@ -40,10 +42,10 @@ class RouletteBoard {
      * @param {number} bet
      */
     placeBet(player, bet) {
-        var record = this.records.find((r) => r.player === player && r.bet === bet);
+        var record = this.betRecords.find((r) => r.player === player && r.bet === bet);
         if (!record) {
             record = {player: player, bet: bet, numberOfChips: 0};
-            this.betRecords.add(record);
+            this.betRecords.push(record);
         }
         record.numberOfChips++;
     }
