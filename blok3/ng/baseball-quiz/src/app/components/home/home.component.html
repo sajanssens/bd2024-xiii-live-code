@@ -1,2 +1,21 @@
-<h1>Hallo!</h1>
-<p>dit is bootstrapped alinea</p>
+<h1>Home</h1>
+
+<input type="text" [(ngModel)]="inputValue" placeholder="type something..."/>
+
+Value = {{ inputValue }}
+
+<br><br>
+<button (click)="resetInputValue()">Reset</button>
+<br><br>
+
+<input type="text" [value]="getValue()" disabled/>
+<div>
+  <p [hidden]="isHidden">Hidden title</p>
+  <button (click)="showToggle()">{{ showOrHideLabel() }} hidden message...</button>
+</div>
+
+<ul>
+  @for (q of questions; track q.id) {
+    <li [attr.aria-label]="getAriaLabel()"  [style.background]="..." [id]="myId()" [class.darker]="q.id % 2 != 0">{{ q.description }} - id{{ q.id }}</li>
+  }
+</ul>
