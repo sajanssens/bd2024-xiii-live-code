@@ -1,21 +1,18 @@
-<h1>Home</h1>
+<h1>Welcome to the umpire quiz app!</h1>
+<BR>
+<button (click)="showToggle()" class="btn btn-warning">{{ showOrHideLabel() }} angular basics...</button>
+<div [hidden]="isHidden" class="m-3 p-2 card">
+  <input type="text" [(ngModel)]="inputValue" placeholder="type something..."/>
 
-<input type="text" [(ngModel)]="inputValue" placeholder="type something..."/>
+  Value = {{ inputValue }}
 
-Value = {{ inputValue }}
+  <br><br>
+  <button (click)="resetInputValue()">Reset</button>
+  <br><br>
 
-<br><br>
-<button (click)="resetInputValue()">Reset</button>
-<br><br>
+  <input type="text" [value]="getValue()" disabled/>
+  <div>
+    <p [hidden]="isHidden">Hidden title</p>
+  </div>
 
-<input type="text" [value]="getValue()" disabled/>
-<div>
-  <p [hidden]="isHidden">Hidden title</p>
-  <button (click)="showToggle()">{{ showOrHideLabel() }} hidden message...</button>
 </div>
-
-<ul>
-  @for (q of questions; track q.id) {
-    <li [attr.aria-label]="getAriaLabel()"  [style.background]="..." [id]="myId()" [class.darker]="q.id % 2 != 0">{{ q.description }} - id{{ q.id }}</li>
-  }
-</ul>

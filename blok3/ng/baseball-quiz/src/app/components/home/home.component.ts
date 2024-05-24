@@ -16,10 +16,10 @@ export class HomeComponent {
   inputValue: String = "default value";
 
   questions: Question[] = [
-    {id: 1, description: "Batter runs from ..."},
-    {id: 2, description: "Batter runs from ..."},
-    {id: 3, description: "Batter runs from ..."},
-    {id: 4, description: "Batter runs from ..."},
+    {id: 1, sQuestion: "Batter runs from ..."},
+    {id: 2, sQuestion: "Batter runs from ..."},
+    {id: 3, sQuestion: "Batter runs from ..."},
+    {id: 4, sQuestion: "Batter runs from ..."},
   ];
 
   isHidden: boolean = true;
@@ -37,7 +37,7 @@ export class HomeComponent {
   }
 
   showOrHideLabel(): String {
-    return this.isHidden ? "Show" : "Hide"
+    return this.isHidden ? "Show some" : "Hide"
   }
 
   myId() {

@@ -1,0 +1,21 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Question</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    @for (q of questions; track q.id) {
+      <tr>
+        <td>{{ q.id }}</td>
+        <td>{{ q.sQuestion }}</td>
+        <td>
+          <button class="btn btn-primary" routerLink="/question/{{q.id}}"> > </button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
