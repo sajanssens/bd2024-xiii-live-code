@@ -1,7 +1,8 @@
 class HelloWorld {
-    static sayHello() {
-        console.log('Hello world');
+    static sayHello(name: String = "world") {
+        console.log(`Hello ${name}`);
     }
 }
 
+HelloWorld.sayHello("Bram");
 HelloWorld.sayHello();
