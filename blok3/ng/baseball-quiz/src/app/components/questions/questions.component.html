@@ -7,8 +7,7 @@
     </tr>
   </thead>
   <tbody>
-
-    @for (q of questions; track q.id) {
+    @for (q of $questions | async; track q.id) {
       <tr>
         <td>{{ q.id }}</td>
         <td>{{ q.sQuestion }}</td>

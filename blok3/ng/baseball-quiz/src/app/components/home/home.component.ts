@@ -14,6 +14,7 @@ import {Question} from "../../domain/Question";
 })
 export class HomeComponent {
   inputValue: String = "default value";
+  imgloc = 'img/umpire.jpg';
 
   questions: Question[] = [
     {id: 1, sQuestion: "Batter runs from ..."},
