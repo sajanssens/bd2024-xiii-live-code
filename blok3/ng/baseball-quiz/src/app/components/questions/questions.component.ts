@@ -23,25 +23,26 @@ import {MyPaginatorConfig} from "../../my.paginator.config";
   providers: [{provide: MatPaginatorIntl, useClass: MyPaginatorConfig}],
 })
 export class QuestionsComponent implements OnInit {
-  questions$: Observable<Question[]> | undefined;
   questions: Question[] = [];
+  questions$!: Observable<Question[]>;
 
+  // for paging:
   totalItems = 100;
   pageSize = 5;
   currentPage = 0;
   pageSizeOptions = [1, 5, 10, 25]
 
   constructor(private questionService: QuestionService) {
-
   }
 
   ngOnInit(): void {
+    this.questions$ = this.questionService.questionsUpdated$;
     this.getAllQuestions()
   }
 
   getAllQuestions() {
-    this.questions$ = this.questionService.findAll();
-    this.questions$.subscribe(r => {
+    this.questionService.findAll();
+    this.questions$?.subscribe(r => {
         this.totalItems = r.length
         this.questions = r.slice(this.currentPage, this.currentPage + this.pageSize);
       }
@@ -55,7 +56,7 @@ export class QuestionsComponent implements OnInit {
   }
 
   remove(id: number) {
-    this.questionService.remove(id).subscribe(() => this.getAllQuestions())
+    this.questionService.remove(id);
   }
 }
 

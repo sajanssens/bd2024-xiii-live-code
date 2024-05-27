@@ -1,23 +1,25 @@
 import {Injectable} from '@angular/core';
 import {Question} from "../domain/Question";
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {Observable, Subject} from "rxjs";
 import {serverUrl} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuestionService {
-
   private url = serverUrl
+
+
   private resource = '/questions';
   private questionsPath = this.url + this.resource;
+  private _questionsUpdated$ = new Subject<Question[]>()
 
   constructor(private httpClient: HttpClient) {
   }
 
-  findAll(): Observable<Question[]> { // R
-    return this.httpClient.get<Question[]>(this.questionsPath);
+   findAll(): void { // R
+    this.httpClient.get<Question[]>(this.questionsPath).subscribe((r) => this._questionsUpdated$.next(r));
   }
 
   find(id: number): Observable<Question> { // R
@@ -25,14 +27,21 @@ export class QuestionService {
   }
 
   add(q: Question) { // C
-    return this.httpClient.post<Question>(this.questionsPath, q, {observe: 'response'} /* = to receive the full httpresponse including the token as http header, instead of only the body */);
+    this.httpClient.post<Question>(this.questionsPath, q, {observe: 'response'} /* = to receive the full httpresponse including the token as http header, instead of only the body */)
+      .subscribe(() => this.findAll());
   }
 
   remove(id: number) { // D
-    return this.httpClient.delete<Question>(`${this.questionsPath}/${id}`);
+    this.httpClient.delete<Question>(`${this.questionsPath}/${id}`)
+      .subscribe(() => this.findAll());
   }
 
   update(id: number, q: Question) { // U
-    return this.httpClient.put<Question>(`${this.questionsPath}/${id}`, q, {observe: 'response'});
+    return this.httpClient.put<Question>(`${this.questionsPath}/${id}`, q, {observe: 'response'})
+      .subscribe(() => this.findAll());
+  }
+
+  get questionsUpdated$(): Subject<Question[]> {
+    return this._questionsUpdated$;
   }
 }
