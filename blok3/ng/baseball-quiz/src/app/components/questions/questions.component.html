@@ -1,5 +1,6 @@
-<mat-paginator [length]="totalItems" [pageSize]="pageSize" [pageIndex]="currentPage"
-               [showFirstLastButtons]="true" [hidePageSize]="true"
+<mat-paginator [length]="totalItems" [pageIndex]="currentPage"
+               [showFirstLastButtons]="true" [hidePageSize]="false"
+               [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
                (page)="pageChanged($event)">
 
 </mat-paginator>
@@ -17,7 +18,8 @@
         <td>{{ q.id }}</td>
         <td>{{ q.sQuestion }}</td>
         <td>
-          <i routerLink="/question/{{q.id}}" class="fa-solid fa-circle-info pointer-hand"></i>
+          <i routerLink="/question/{{q.id}}" class="fa-solid fa-circle-info pointer-hand" style='color: #126500;'></i>
+          <i (click)="remove(q.id)" class="m-2 fa-solid fa-square-xmark pointer-hand"></i>
         </td>
       </tr>
     }
