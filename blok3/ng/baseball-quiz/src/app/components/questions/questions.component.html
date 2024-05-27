@@ -7,12 +7,12 @@
     </tr>
   </thead>
   <tbody>
-    @for (q of $questions | async; track q.id) {
+    @for (q of questions$ | async; track q.id) {
       <tr>
         <td>{{ q.id }}</td>
         <td>{{ q.sQuestion }}</td>
         <td>
-          <button class="btn btn-primary" routerLink="/question/{{q.id}}"> > </button>
+          <button class="btn btn-primary" routerLink="/question/{{q.id}}"> ></button>
         </td>
       </tr>
     }

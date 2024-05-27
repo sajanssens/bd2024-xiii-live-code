@@ -8,15 +8,26 @@ import {Observable} from "rxjs";
 })
 export class QuestionService {
 
-
-  constructor(private http: HttpClient) {
+  constructor(private httpClient: HttpClient) {
   }
 
-  findAll(): Observable<Question[]> {
-    return this.http.get<Question[]>('http://localhost:3000/questions');
+  findAll(): Observable<Question[]> { // R
+    return this.httpClient.get<Question[]>('http://localhost:3000/questions');
   }
 
-  find(id: number): Observable<Question> {
-    return this.http.get<Question>(`http://localhost:3000/questions/${id}`);
+  find(id: number): Observable<Question> { // R
+    return this.httpClient.get<Question>(`http://localhost:3000/questions/${id}`);
+  }
+
+  add(q: Question) { // C
+    return this.httpClient.post<Question>(`http://localhost:3000/questions`, q, {observe: 'response'} /* = to receive the full httpresponse including the token as http header, instead of only the body */);
+  }
+
+  remove(id: number) { // D
+    return this.httpClient.delete<Question>(`http://localhost:3000/questions/${id}`);
+  }
+
+  update(id: number, q: Question) { // U
+    return this.httpClient.put<Question>(`http://localhost:3000/questions/${id}`, q, {observe: 'response'});
   }
 }

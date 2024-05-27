@@ -3,20 +3,23 @@ import {RouterLink} from "@angular/router";
 import {Question} from "../../domain/Question";
 import {QuestionService} from "../../services/question.service";
 import {Observable} from "rxjs";
-import {AsyncPipe} from "@angular/common";
+import {AsyncPipe, DatePipe, LowerCasePipe, UpperCasePipe} from "@angular/common";
 
 @Component({
   selector: 'bq-questions',
   standalone: true,
   imports: [
     RouterLink,
-    AsyncPipe
+    AsyncPipe,
+    UpperCasePipe,
+    LowerCasePipe,
+    DatePipe
   ],
   templateUrl: './questions.component.html',
   styleUrl: './questions.component.scss'
 })
 export class QuestionsComponent implements OnInit {
-  $questions: Observable<Question[]> | undefined;
+  questions$: Observable<Question[]> | undefined;
 
   constructor(private questionService: QuestionService) {
 
@@ -27,7 +30,7 @@ export class QuestionsComponent implements OnInit {
   }
 
   getAllQuestions() {
-    this.$questions = this.questionService.findAll();
+    this.questions$ = this.questionService.findAll();
   }
 
 }

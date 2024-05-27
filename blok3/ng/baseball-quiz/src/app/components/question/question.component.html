@@ -1,12 +1,12 @@
 Edit question:
 <form (ngSubmit)="save(questionForm)" #questionForm="ngForm" class="card p-2 m-2" novalidate>
   <div class="card-body">
-    <label for="make" class="form-label">Id <span *ngIf="make.errors?.['required']">*</span></label>
-    <input type="text" #make="ngModel" required minlength="3" id="make" name="make" [(ngModel)]="question.id"
+    <label for="qId" class="form-label">Id <span *ngIf="qId.errors?.['required']">*</span></label>
+    <input type="text" #qId="ngModel" required minlength="3" id="qId" name="make" [(ngModel)]="question.id"
            class="form-control mb-2" disabled>
 
-    <label for="question" class="form-label">Question<span *ngIf="model.errors?.['required']">*</span></label>
-    <textarea type="text" #model="ngModel" required id="question" name="question" [(ngModel)]="question.sQuestion"
+    <label for="sQuestion" class="form-label">Question<span *ngIf="sQuestion.errors?.['required']">*</span></label>
+    <textarea type="text" #sQuestion="ngModel" required id="sQuestion" name="question" [(ngModel)]="question.sQuestion"
               class="form-control  mb-2" rows="5"></textarea>
 
     <div class="btn-group" role="group" aria-label="Buttons">
