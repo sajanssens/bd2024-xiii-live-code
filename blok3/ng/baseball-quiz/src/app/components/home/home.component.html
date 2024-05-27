@@ -1,8 +1,12 @@
 <h1>Welcome to the umpire quiz app!</h1>
-<img src="img/umpire.jpg">
-<BR>
-<button (click)="showToggle()" class="btn btn-warning">{{ showOrHideLabel() }} angular basics...</button>
-<div [hidden]="isHidden" class="m-3 p-2 card">
+
+<div class="my-3"><img src="img/umpire.jpg"></div>
+
+<div class="my-3">
+  <button (click)="showToggle()" class="btn btn-warning">{{ showOrHideLabel() }} angular basics...</button>
+</div>
+
+<div [hidden]="isHidden" class="m-3 p-2 card" style="width: 18rem;">
   <input type="text" [(ngModel)]="inputValue" placeholder="type something..."/>
 
   Value = {{ inputValue }}

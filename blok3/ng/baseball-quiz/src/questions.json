@@ -1,39 +1,8 @@
 {
   "questions": [
     {
-      "R1": true,
-      "R2": true,
-      "R3": true,
-      "BR": true,
-      "fMinors": true,
-      "fMajors": true,
-      "fSoftball": true,
-      "fLocal": false,
-      "fFed": false,
-      "fIntermediates": true,
-      "fJuniors": true,
-      "fSeniors": true,
-      "fRegular": true,
-      "fTournament": true,
-      "fBaseball": true,
-      "nDiff": 3,
-      "sLocal": null,
-      "cOuts": 0,
-      "cBalls": 0,
-      "cStrikes": 0,
       "sQuestion": "3rd baseman asks for and gets time.  He confers with the pitcher and returns to 3rd base with the ball.  R3 steps off the bag and is tagged out by the 3rd baseman.",
-      "rgsAnswers": [
-        "R3 is out",
-        "R3 is not out.",
-        null,
-        null
-      ],
-      "nCorrectAnswer": 2,
-      "id": 9,
-      "nGivenAnswer": 0,
-      "iQuestionTarget": 0,
-      "sRuling": "3.12, 5.11. When time is called, the ball is dead.  The ball cannot become live again until the pitcher is set on the mound, with the ball, and umpire calls \"play\".",
-      "sLastRulebookChecked": "2007"
+      "id": 9
     },
     {
       "R1": false,

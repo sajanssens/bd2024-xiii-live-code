@@ -6,5 +6,5 @@ import {QuestionComponent} from "./components/question/question.component";
 export const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'admin', component: AdminComponent},
-  {path: 'question/:id', component: QuestionComponent},
+  {path: 'questions/:id', component: QuestionComponent}
 ];

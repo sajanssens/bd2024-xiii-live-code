@@ -1,9 +1,14 @@
-<mat-paginator [length]="totalItems" [pageIndex]="currentPage"
-               [showFirstLastButtons]="true" [hidePageSize]="false"
-               [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
-               (page)="pageChanged($event)">
+<div class="row">
+  <div class="col-7 my-auto" routerLink="/questions/add"><i class="fa-solid fa-square-plus" style='color: #177b00;'></i> New</div>
+  <div class="col-5">
+    <mat-paginator [length]="totalItems" [pageIndex]="currentPage"
+                   [showFirstLastButtons]="true" [hidePageSize]="false"
+                   [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+                   (page)="pageChanged($event)">
 
-</mat-paginator>
+    </mat-paginator>
+  </div>
+</div>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -18,8 +23,8 @@
         <td>{{ q.id }}</td>
         <td>{{ q.sQuestion }}</td>
         <td>
-          <i routerLink="/question/{{q.id}}" class="fa-solid fa-circle-info pointer-hand" style='color: #126500;'></i>
-          <i (click)="remove(q.id)" class="m-2 fa-solid fa-square-xmark pointer-hand"></i>
+          <i routerLink="/questions/{{q.id}}" class="fa-solid fa-circle-info pointer-hand" style='color: #0044ff;'></i>
+          <i (click)="remove(q.id)" class="m-2 fa-solid fa-square-xmark pointer-hand" style='color: #ff0303;'></i>
         </td>
       </tr>
     }

@@ -1,17 +1,18 @@
-Edit question:
+{{ this.mode }} question:
 <form (ngSubmit)="save(questionForm)" #questionForm="ngForm" class="card p-2 m-2" novalidate>
   <div class="card-body">
-    <label for="qId" class="form-label">Id <span *ngIf="qId.errors?.['required']">*</span></label>
-    <input type="text" #qId="ngModel" required minlength="3" id="qId" name="make" [(ngModel)]="question.id"
-           class="form-control mb-2" disabled>
-
+    @if (this.editMode) {
+      <label for="id" class="form-label">Id <span *ngIf="qId.errors?.['required']">*</span></label>
+      <input type="text" #qId="ngModel" required minlength="3" id="id" name="id" [(ngModel)]="question.id"
+             class="form-control mb-2" readonly>
+    }
     <label for="sQuestion" class="form-label">Question<span *ngIf="sQuestion.errors?.['required']">*</span></label>
-    <textarea type="text" #sQuestion="ngModel" required id="sQuestion" name="question" [(ngModel)]="question.sQuestion"
+    <textarea type="text" #sQuestion="ngModel" required id="sQuestion" name="sQuestion" [(ngModel)]="question.sQuestion"
               class="form-control  mb-2" rows="5"></textarea>
 
     <div class="btn-group" role="group" aria-label="Buttons">
-      <button class="btn btn-primary">Ok</button>
-      <button (click)="cancel()" class="btn btn-secondary">Cancel</button>
+      <button class="btn btn-success">Ok</button>
+      <button (click)="cancel()" class="btn btn-warning">Cancel</button>
     </div>
   </div>
 </form>

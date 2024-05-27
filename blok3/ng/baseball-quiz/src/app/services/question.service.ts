@@ -36,8 +36,8 @@ export class QuestionService {
       .subscribe(() => this.findAll());
   }
 
-  update(id: number, q: Question) { // U
-    return this.httpClient.put<Question>(`${this.questionsPath}/${id}`, q, {observe: 'response'})
+  update(q: Question) { // U
+    this.httpClient.put<Question>(`${this.questionsPath}/${q.id}`, q, {observe: 'response'})
       .subscribe(() => this.findAll());
   }
 

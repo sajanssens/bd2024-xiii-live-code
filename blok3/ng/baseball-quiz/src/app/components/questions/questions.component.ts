@@ -44,19 +44,22 @@ export class QuestionsComponent implements OnInit {
     this.questionService.findAll();
     this.questions$?.subscribe(r => {
         this.totalItems = r.length
-        this.questions = r.slice(this.currentPage, this.currentPage + this.pageSize);
+
+        let start = this.currentPage * this.pageSize;
+        let end = start + this.pageSize;
+        this.questions = r.slice(start, end);
       }
     )
+  }
+
+  remove(id: number) {
+    this.questionService.remove(id);
   }
 
   pageChanged(event: PageEvent) {
     this.currentPage = event.pageIndex;
     this.pageSize = event.pageSize;
     this.getAllQuestions()
-  }
-
-  remove(id: number) {
-    this.questionService.remove(id);
   }
 }
 
