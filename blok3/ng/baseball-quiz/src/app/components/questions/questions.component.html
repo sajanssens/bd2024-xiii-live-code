@@ -1,3 +1,8 @@
+<mat-paginator [length]="totalItems" [pageSize]="pageSize" [pageIndex]="currentPage"
+               [showFirstLastButtons]="true" [hidePageSize]="true"
+               (page)="pageChanged($event)">
+
+</mat-paginator>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -7,14 +12,15 @@
     </tr>
   </thead>
   <tbody>
-    @for (q of questions$ | async; track q.id) {
+    @for (q of questions; track $index) {
       <tr>
         <td>{{ q.id }}</td>
         <td>{{ q.sQuestion }}</td>
         <td>
-          <button class="btn btn-primary" routerLink="/question/{{q.id}}"> ></button>
+          <i routerLink="/question/{{q.id}}" class="fa-solid fa-circle-info pointer-hand"></i>
         </td>
       </tr>
     }
   </tbody>
 </table>
+
