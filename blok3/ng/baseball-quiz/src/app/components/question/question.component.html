@@ -1,18 +1,22 @@
-{{ this.mode }} question:
+{{ this.modeLabel }} question:
 <form (ngSubmit)="save(questionForm)" #questionForm="ngForm" class="card p-2 m-2" novalidate>
   <div class="card-body">
     @if (this.editMode) {
-      <label for="id" class="form-label">Id <span *ngIf="qId.errors?.['required']">*</span></label>
-      <input type="text" #qId="ngModel" required minlength="3" id="id" name="id" [(ngModel)]="question.id"
-             class="form-control mb-2" readonly>
+      <label for="id" class="form-label">Id</label>
+      <input type="text" class="form-control mb-2"
+             id="id" name="id"
+             required minlength="3" readonly
+             [(ngModel)]="question.id">
     }
-    <label for="sQuestion" class="form-label">Question<span *ngIf="sQuestion.errors?.['required']">*</span></label>
-    <textarea type="text" #sQuestion="ngModel" required id="sQuestion" name="sQuestion" [(ngModel)]="question.sQuestion"
-              class="form-control  mb-2" rows="5"></textarea>
+    <label for="sQuestion" class="form-label">Question<span>{{ asterisk(sQuestion) }}</span></label>
+    <textarea type="text" rows="5" class="form-control mb-2"
+              id="sQuestion" name="sQuestion"
+              required
+              [(ngModel)]="question.sQuestion" #sQuestion="ngModel"></textarea>
 
     <div class="btn-group" role="group" aria-label="Buttons">
       <button class="btn btn-success">Ok</button>
-      <button (click)="cancel()" class="btn btn-warning">Cancel</button>
+      <div class="btn btn-warning" (click)="cancel()">Cancel</div>
     </div>
   </div>
 </form>

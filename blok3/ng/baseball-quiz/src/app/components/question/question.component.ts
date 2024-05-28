@@ -1,7 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {Question} from "../../domain/Question";
-import {FormsModule, NgForm} from "@angular/forms";
+import {FormsModule, NgForm, NgModel} from "@angular/forms";
 import {QuestionService} from "../../services/question.service";
 
 @Component({
@@ -13,9 +13,9 @@ import {QuestionService} from "../../services/question.service";
 })
 export class QuestionComponent implements OnInit {
 
-  @Input() editMode = true;
+  editMode = true;
   question: Question = {} as Question;
-  mode: string = "Wijzig";
+  modeLabel: string = "Wijzig";
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -23,12 +23,12 @@ export class QuestionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const idParam = this.route.snapshot.paramMap.get('id');
-    if (idParam === 'add') {
+    const subPath = this.route.snapshot.paramMap.get('subPath');
+    if (subPath === 'add') {
       this.editMode = false;
-      this.mode = "Toevoegen"
+      this.modeLabel = "Toevoegen"
     } else {
-      this.loadQuestion(idParam);
+      this.loadQuestion(subPath);
     }
   }
 
@@ -52,5 +52,9 @@ export class QuestionComponent implements OnInit {
 
   private back() {
     this.router.navigate(['admin'])
+  }
+
+  asterisk(model: NgModel) {
+    return model.errors?.['required'] ? "*" : "";
   }
 }
