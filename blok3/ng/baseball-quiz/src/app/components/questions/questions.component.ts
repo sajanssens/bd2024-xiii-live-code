@@ -6,6 +6,7 @@ import {Observable} from "rxjs";
 import {AsyncPipe, DatePipe, LowerCasePipe, UpperCasePipe} from "@angular/common";
 import {MatPaginator, MatPaginatorIntl, PageEvent} from "@angular/material/paginator";
 import {MyPaginatorConfig} from "../../my.paginator.config";
+import {SearchComponent} from "../search/search.component";
 
 @Component({
   selector: 'bq-questions',
@@ -16,7 +17,8 @@ import {MyPaginatorConfig} from "../../my.paginator.config";
     UpperCasePipe,
     LowerCasePipe,
     DatePipe,
-    MatPaginator
+    MatPaginator,
+    SearchComponent
   ],
   templateUrl: './questions.component.html',
   styleUrl: './questions.component.scss',
@@ -60,6 +62,10 @@ export class QuestionsComponent implements OnInit {
     this.currentPage = event.pageIndex;
     this.pageSize = event.pageSize;
     this.getAllQuestions()
+  }
+
+  handleSearch(event: string) {
+    this.questionService.search(event)
   }
 }
 

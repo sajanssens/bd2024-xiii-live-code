@@ -1,5 +1,10 @@
 <div class="row">
-  <div class="col-7 my-auto" routerLink="/questions/add"><i class="fa-solid fa-square-plus" style='color: #177b00;'></i> New</div>
+  <div class="col-2 my-auto" routerLink="/questions/add"><i class="fa-solid fa-square-plus" style='color: #177b00;'></i>
+    New
+  </div>
+  <div class="col-5 my-auto">
+    <bq-search placeholder="Search question..." (search)="handleSearch($event)"></bq-search>
+  </div>
   <div class="col-5">
     <mat-paginator [length]="totalItems" [pageIndex]="currentPage"
                    [showFirstLastButtons]="true" [hidePageSize]="false"
@@ -10,9 +15,9 @@
   </div>
 </div>
 <table class="table table-striped">
-  <thead>
+  <thead class="thead-dark">
     <tr>
-      <th>Id</th>
+      <th>#</th>
       <th>Question</th>
       <th>Details</th>
     </tr>

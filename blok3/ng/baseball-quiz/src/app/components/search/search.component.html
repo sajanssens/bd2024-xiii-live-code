@@ -1,0 +1,11 @@
+<div class="row p-2">
+  <div class="col-12">
+    <div class="input-group">
+      <input (keydown.enter)="go()" (input)="clearIfEmpty()" type="search" name="searchterm" id="form1"
+             class="form-control my-auto" [placeholder]="placeholder" [(ngModel)]="input">
+      <button (click)="go()" type="submit" class="btn btn-sm btn-secondary">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </div>
+</div>
