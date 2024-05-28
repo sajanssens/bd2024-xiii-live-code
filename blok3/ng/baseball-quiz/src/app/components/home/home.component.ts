@@ -1,13 +1,15 @@
 import {Component} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 import {Question} from "../../domain/Question";
+import {ContactFormComponent} from "../contact-form/contact-form.component";
 
 
 @Component({
   selector: 'bq-home',
   standalone: true,
   imports: [
-    FormsModule
+    FormsModule,
+    ContactFormComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

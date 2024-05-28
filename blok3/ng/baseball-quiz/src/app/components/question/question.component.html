@@ -3,19 +3,27 @@
   <div class="card-body">
     @if (this.editMode) {
       <label for="id" class="form-label">Id</label>
-      <input type="text" class="form-control mb-2"
+      <input type="number" class="form-control mb-2"
              id="id" name="id"
-             required minlength="3" readonly
+             required
              [(ngModel)]="question.id">
     }
+
     <label for="sQuestion" class="form-label">Question<span>{{ asterisk(sQuestion) }}</span></label>
     <textarea type="text" rows="5" class="form-control mb-2"
               id="sQuestion" name="sQuestion"
               required
               [(ngModel)]="question.sQuestion" #sQuestion="ngModel"></textarea>
 
+    <label for="cStrikes" class="form-label">Strikes</label>
+    <input type="number" class="form-control mb-2"
+           id="cStrikes" name="cStrikes"
+           #cStrikes="ngModel"
+           maxlength="1" max="3" required
+           ngModel >
+
     <div class="btn-group" role="group" aria-label="Buttons">
-      <button class="btn btn-success">Ok</button>
+      <button class="btn btn-success" [disabled]="questionForm.invalid">Ok</button>
       <div class="btn btn-warning" (click)="cancel()">Cancel</div>
     </div>
   </div>

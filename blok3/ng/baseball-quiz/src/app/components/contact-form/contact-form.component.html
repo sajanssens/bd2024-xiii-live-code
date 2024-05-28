@@ -1,0 +1,54 @@
+<div class="col-md-12" (click)="toggleForm()">Add new contact <i class="far fa-{{plusMinus}}-square"></i></div>
+
+@if (plusMinus === 'minus') {
+
+  <form (ngSubmit)="submit()" [formGroup]="contactForm">
+    <div class="d-flex">
+      <div class="p-1">
+        <input type="text" formControlName="firstName" name="firstName" id="inputFirstNameR" class="form-control"
+               placeholder="First name">
+      </div>
+      <div class="p-1">
+        <input type="text" formControlName="surname" name="surname" id="inputSurnameR" class="form-control"
+               placeholder="Surname">
+      </div>
+      <div class="p-1 flex-grow-1">
+        <div class="input-group">
+          <div class="input-group-text">&commat;</div>
+          <input type="text" formControlName="email" name="email" id="inputEmailR" class="form-control"
+                 placeholder="Email">
+        </div>
+      </div>
+      <div class="p-1 d-flex ms-auto align-content-center flex-wrap">
+        <input type="submit" id="submit" class="btn btn-primary" value="Save">
+      </div>
+    </div>
+
+    <div class="d-flex">
+      <div class="p-1">
+        <label for="gender">Gender</label>
+        <select formControlName="gender" name="gender" id="gender" class="form-select">
+          @for (g of genders; track $index) {
+            <option [ngValue]="g">{{ g.name }}</option>
+          }
+        </select>
+      </div>
+      <div class="p-1">
+        <label>Languages</label>
+        <div class="row" formArrayName="languages">
+          @for (l of languages; track $index) {
+            <div class="col-auto">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="{{$index}}" [formControlName]="$index">
+                <label class="form-check-label" for="{{$index}}">{{ l.name }}</label>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </form>
+}
+
+
+<!--<pre>{{contactForm.value | json}}</pre>-->

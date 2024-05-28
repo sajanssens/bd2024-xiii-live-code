@@ -40,7 +40,6 @@ export class QuestionService {
       .subscribe(() => this.findAll());
   }
 
-
   search(term: string): void {
     this.httpClient.get<Question[]>(`${this.questions}?q=${term}`).subscribe(
       (result) => this._questionsUpdated$.next(result)

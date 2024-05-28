@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 import {Question} from "../../domain/Question";
 import {FormsModule, NgForm, NgModel} from "@angular/forms";
 import {QuestionService} from "../../services/question.service";
@@ -20,10 +20,18 @@ export class QuestionComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private router: Router,
               private service: QuestionService) {
+    console.log("QuestionComponent constructor")
+
   }
 
   ngOnInit(): void {
-    const subPath = this.route.snapshot.paramMap.get('subPath');
+    console.log("QuestionComponent ngOnInit")
+    this.route.paramMap.subscribe(
+      (params: ParamMap) => this.processUrlParams(params.get('subPath') ?? "")
+    )
+  }
+
+  private processUrlParams(subPath: string) {
     if (subPath === 'add') {
       this.editMode = false;
       this.modeLabel = "Toevoegen"
@@ -38,6 +46,8 @@ export class QuestionComponent implements OnInit {
   }
 
   save(questionForm: NgForm) {
+    if(!questionForm.valid) return;
+
     if (this.editMode) {
       this.service.update(questionForm.value)
     } else {

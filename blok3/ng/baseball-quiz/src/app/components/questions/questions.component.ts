@@ -64,8 +64,8 @@ export class QuestionsComponent implements OnInit {
     this.getAllQuestions()
   }
 
-  handleSearch(event: string) {
-    this.questionService.search(event)
+  handleSearch(searchTerm: string) {
+    this.questionService.search(searchTerm)
   }
 }
 
