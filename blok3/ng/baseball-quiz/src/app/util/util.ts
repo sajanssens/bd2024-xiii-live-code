@@ -6,5 +6,5 @@ export function emailValidator(control: AbstractControl): ValidationErrors | nul
   }
 
   const regex = /^.+@.+\.[a-zA-Z]+$/;
-  return regex.test(control.value) ? null : {email: {valid: false}};
+  return regex.test(control.value) ? null : {email: {valid: false}, required: {valid: true}};
 }

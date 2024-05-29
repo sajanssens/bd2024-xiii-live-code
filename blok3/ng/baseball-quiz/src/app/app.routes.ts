@@ -2,6 +2,7 @@ import {Routes} from '@angular/router';
 import {AdminComponent} from "./components/admin/admin.component";
 import {HomeComponent} from "./components/home/home.component";
 import {QuestionComponent} from "./components/question/question.component";
+import {ContactFormComponent} from "./components/contact-form/contact-form.component";
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -11,6 +12,7 @@ export const routes: Routes = [
       {path: ':subPath', component: QuestionComponent}
     ]
   },
-  {path: 'questions/:subPath', component: QuestionComponent}
+  {path: 'questions/:subPath', component: QuestionComponent},
+  {path: 'contact', component: ContactFormComponent}
 
 ];

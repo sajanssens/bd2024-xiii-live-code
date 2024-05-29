@@ -1,0 +1,8 @@
+@import 'bootstrap';
+
+input:not([type="checkbox"]).ng-invalid.ng-touched {
+  @extend .is-invalid !optional;
+}
+input:not([type="checkbox"]).ng-valid.ng-touched {
+  @extend .is-valid !optional;
+}

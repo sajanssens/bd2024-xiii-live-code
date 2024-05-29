@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Contact} from '../domain/contact';
+import {Contact} from '../domain/contact/contact';
 import {Observable, Subject} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {serverUrl} from '../../environments/environment';

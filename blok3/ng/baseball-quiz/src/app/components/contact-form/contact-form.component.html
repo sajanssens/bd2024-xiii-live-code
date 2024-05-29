@@ -1,20 +1,17 @@
-<div class="col-md-12" (click)="toggleForm()">Add new contact <i class="far fa-{{plusMinus}}-square"></i></div>
-
-@if (plusMinus === 'minus') {
-
+<div class="row">
   <form (ngSubmit)="submit()" [formGroup]="contactForm">
     <div class="d-flex">
       <div class="p-1">
-        <input type="text" formControlName="firstName" name="firstName" id="inputFirstNameR" class="form-control"
-               placeholder="First name">
+        <input type="text" formControlName="firstName" class="form-control"
+               placeholder="First name" required>
       </div>
       <div class="p-1">
-        <input type="text" formControlName="surname" name="surname" id="inputSurnameR" class="form-control"
-               placeholder="Surname">
+        <input type="text" formControlName="surname" class="form-control"
+               placeholder="Surname" required>
       </div>
       <div class="p-1 flex-grow-1">
         <div class="input-group">
-          <div class="input-group-text">&commat;</div>
+          <div class="input-group-text"><i class="fa-regular fa-envelope"></i></div>
           <input type="text" formControlName="email" name="email" id="inputEmailR" class="form-control"
                  placeholder="Email">
         </div>
@@ -35,10 +32,10 @@
       </div>
       <div class="p-1">
         <label>Languages</label>
-        <div class="row" formArrayName="languages">
+        <div class="d-flex gap-3" formArrayName="languages">
           @for (l of languages; track $index) {
-            <div class="col-auto">
-              <div class="form-check">
+            <div class="">
+              <div class="form-check d-flex gap-1">
                 <input class="form-check-input" type="checkbox" id="{{$index}}" [formControlName]="$index">
                 <label class="form-check-label" for="{{$index}}">{{ l.name }}</label>
               </div>
@@ -48,7 +45,10 @@
       </div>
     </div>
   </form>
+</div>
+
+<div class="col-md-12" (click)="toggleForm()">Open/close debug info <i class="far fa-{{plusMinus}}-square"></i></div>
+
+@if (plusMinus === 'minus') {
+  <pre>{{ contactForm.value | json }}</pre>
 }
-
-
-<!--<pre>{{contactForm.value | json}}</pre>-->
