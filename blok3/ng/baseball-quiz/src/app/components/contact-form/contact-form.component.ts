@@ -29,10 +29,6 @@ export class ContactFormComponent implements OnInit {
   constructor(private contactService: ContactService, private fb: FormBuilder) {
   }
 
-  get languagesFormArray(): FormArray {
-    return this.contactForm.get('languages') as FormArray;
-  }
-
   ngOnInit(): void {
     const fb = this.fb;
     this.contactForm = fb.group({
@@ -43,6 +39,10 @@ export class ContactFormComponent implements OnInit {
       languages: fb.array([])
     });
     this.initLanguagesControls();
+  }
+
+  get languagesFormArray(): FormArray {
+    return this.contactForm.get('languages') as FormArray;
   }
 
   private initLanguagesControls(): void {
