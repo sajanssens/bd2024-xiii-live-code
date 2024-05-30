@@ -5,4 +5,5 @@
 export const environment = {production: false};
 
 // export const serverUrl = 'http://localhost:9080/rest/api';
-export const serverUrl = 'http://localhost:3000';
+// export const serverUrl = 'http://localhost:3000';
+export const serverUrl = 'http://localhost:8080/javawebapp_war_exploded';
