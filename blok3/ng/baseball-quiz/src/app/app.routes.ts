@@ -5,6 +5,7 @@ import {QuestionComponent} from "./components/question/question.component";
 import {ContactFormComponent} from "./components/contact-form/contact-form.component";
 
 export const routes: Routes = [
+  {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
   {
     path: 'admin', component: AdminComponent, // now, add router-outlet to AdminComponent's template

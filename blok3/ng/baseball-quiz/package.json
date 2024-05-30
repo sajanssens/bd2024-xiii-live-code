@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "test:ui": "playwright test"
   },
   "private": true,
   "dependencies": {
@@ -31,7 +32,11 @@
     "@angular/cli": "^18.0.0",
     "@angular/compiler-cli": "^18.0.0",
     "@angular/localize": "^18.0.0",
+    "@playwright/test": "^1.44.1",
+    "@stryker-mutator/core": "^8.2.6",
+    "@stryker-mutator/karma-runner": "^8.2.6",
     "@types/jasmine": "~5.1.0",
+    "@types/node": "^20.12.12",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",

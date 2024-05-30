@@ -26,7 +26,7 @@
         <label for="gender">Gender</label>
         <select formControlName="gender" name="gender" id="gender" class="form-select">
           @for (g of genders; track $index) {
-            <option [ngValue]="g">{{ g.name }}</option>
+            <option [ngValue]="g.id" [selected]="this.contact.gender.id === g.id">{{ g.name }}</option>
           }
         </select>
       </div>
@@ -47,8 +47,8 @@
   </form>
 </div>
 
-<div class="col-md-12" (click)="toggleForm()">Open/close debug info <i class="far fa-{{plusMinus}}-square"></i></div>
+<div class="col-md-12" (click)="toggleForm()">Open/close debug info <i class="far fa-{{icon}}-square"></i></div>
 
-@if (plusMinus === 'minus') {
+@if (icon === 'minus') {
   <pre>{{ contactForm.value | json }}</pre>
 }

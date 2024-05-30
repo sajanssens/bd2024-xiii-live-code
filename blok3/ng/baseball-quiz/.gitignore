@@ -40,4 +40,11 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-/src/questions.json
+/src/data.json
+
+# stryker temp files
+.stryker-tmp
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
