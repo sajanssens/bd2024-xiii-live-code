@@ -15,4 +15,14 @@
     <url-pattern>/questions</url-pattern>
   </servlet-mapping>
 
+  <filter>
+    <filter-name>Cors</filter-name>
+    <filter-class>com.infosupport.CorsFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>Cors</filter-name>
+    <url-pattern>*</url-pattern>
+  </filter-mapping>
+
 </web-app>

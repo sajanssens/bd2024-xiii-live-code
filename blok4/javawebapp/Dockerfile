@@ -1,4 +1,4 @@
-FROM tomcat:9-alpine
+FROM tomcat:10-jre21-temurin-jammy
 ADD target/javawebapp.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080

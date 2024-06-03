@@ -15,8 +15,6 @@ public class QuestionsResource extends HttpServlet {
         System.out.println("GET /questions " + (id != null ? "id=" + id : ""));
 
         resp.setStatus(201);
-        resp.addHeader("Content-Type", "application/json;charset=UTF-8");
-        resp.addHeader("Access-Control-Allow-Origin", "http://localhost:4200");
         resp.getWriter().println("""
                   [
                     {
