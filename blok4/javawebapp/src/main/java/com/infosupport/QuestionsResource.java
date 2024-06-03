@@ -11,10 +11,12 @@ public class QuestionsResource extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("GET /questions");
+        String id = req.getParameter("id");
+        System.out.println("GET /questions " + (id != null ? "id=" + id : ""));
 
         resp.setStatus(201);
         resp.addHeader("Content-Type", "application/json;charset=UTF-8");
+        resp.addHeader("Access-Control-Allow-Origin", "http://localhost:4200");
         resp.getWriter().println("""
                   [
                     {
@@ -376,7 +378,8 @@ public class QuestionsResource extends HttpServlet {
                 """);
     }
 
-    @Override protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doDelete(req, resp);
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setStatus(HttpServletResponse.SC_NO_CONTENT);
     }
 }

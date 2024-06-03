@@ -8,11 +8,21 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet("/contacts")
+@WebServlet("/contacts/42")
 public class ContactsResource extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("GET /contacts");
+        resp.getWriter().println("""
+                [
+                    {
+                      "id": 42,
+                      "firstName": "Bram",
+                      "surname": "Janssens",
+                      "gender": "Male",
+                      "email": "test@test.com"
+                    }
+                  ]
+                """);
     }
 }
