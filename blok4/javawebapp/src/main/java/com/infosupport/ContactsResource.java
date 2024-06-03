@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet("/contacts/42")
+@WebServlet("/api/contacts/42")
 public class ContactsResource extends HttpServlet {
 
     @Override
