@@ -39,10 +39,9 @@
         </auth-constraint>
     </security-constraint>
 
-    <login-config>
-        <auth-method>DIGEST</auth-method>
+    <!--<login-config>
+        <auth-method>BASIC</auth-method>
         <realm-name>file</realm-name>
-    </login-config>
-
+    </login-config>-->
 
 </web-app>
