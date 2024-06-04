@@ -49,6 +49,7 @@
     </dependencies>
 
     <build>
+        <finalName>baseballquiz</finalName>
         <plugins>
             <plugin>
                 <groupId>io.openliberty.tools</groupId>
