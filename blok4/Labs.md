@@ -20,14 +20,14 @@
            - domain
            - repositories
            - resources
-       - maak je eerste resource op een uniek `@Path` met een `@GET` endpoint die "Hello World" teruggeeft.\
-	1. breid je GET endpoint uit met een query parameter id: als deze negatief is, geef dan een 403 terug.
+       - maak je eerste resource op een uniek `@Path` met een `@GET` endpoint die "Hello World" teruggeeft.
+	1. breid je GET endpoint uit met een query parameter id: als deze negatief is, geef dan een http 400 terug.
 	1. maak je tweede resource met een GET endpoint die een List van objecten teruggeeft als JSON.
 	1. breid die resource uit met: GET met queryparam, GET met pathparam, POST, PUT DELETE
        - test met bijv. de Http client in IDEA of met Postman.
 	1. sluit je frontend op je backend aan
 	1. bouw ondersteuning in voor XML-responses
-	1. bouw in dat je json array valide is
+	(1. bouw in dat je json array valide is)
 	1. maak een Dao voor je objecten
 	1. Handling errors implementeren m.b.v. exceptions
 	1. Sub resources implementeren

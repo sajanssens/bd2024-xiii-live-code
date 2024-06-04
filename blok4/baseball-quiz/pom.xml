@@ -46,10 +46,14 @@
             <groupId>jakarta.persistence</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
-        <finalName>baseballquiz</finalName>
+        <finalName>baseball-quiz</finalName>
         <plugins>
             <plugin>
                 <groupId>io.openliberty.tools</groupId>
