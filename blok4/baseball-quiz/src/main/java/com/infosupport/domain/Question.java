@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 @Builder @AllArgsConstructor
 public class Question {
     private int id;
-    private String question;
+    private String text;
 }

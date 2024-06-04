@@ -1,6 +1,8 @@
 package com.infosupport.resources;
 
 import com.infosupport.domain.Question;
+import com.infosupport.repos.QuestionRepo;
+import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
@@ -13,34 +15,35 @@ import java.util.List;
 
 import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
 
-// http(s)://localhost:9080/baseball-quiz/api/questions
+// .../baseball-quiz/api/questions
 @Path("questions")
 public class QuestionsResource {
 
-    private static List<Question> questions = List.of(
-            Question.builder().id(1).question("test").build(),
-            Question.builder().id(2).question("test2").build()
-    );
+    @Inject
+    private QuestionRepo repo;
+
+    @Inject
+    private QuestionResource questionResource;
 
     @GET @Produces(APPLICATION_JSON)
     public List<Question> getList(@QueryParam("question") String question) {
         if (question == null || question.isBlank()) {
-            return questions;
+            return repo.readAll();
         }
 
-        return questions.stream().filter(q -> question.contains(q.getQuestion())).toList();
+        return repo.readAll().stream()
+                .filter(q -> question.contains(q.getText()))
+                .toList();
     }
 
     @POST
     @Produces(APPLICATION_JSON) @Consumes(APPLICATION_JSON)
     public Question add(Question q) {
-        // zet q in de database
-        q.setId(42);
-        return q;
+        return repo.create(q);
     }
 
     @Path("{id}")
     public QuestionResource getQuestionsResource(@PathParam("id") int id) {
-        return new QuestionResource(id);
+        return questionResource.with(id);
     }
 }
