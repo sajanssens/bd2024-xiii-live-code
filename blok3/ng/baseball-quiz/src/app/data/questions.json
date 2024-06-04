@@ -21,7 +21,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "3rd baseman asks for and gets time.  He confers with the pitcher and returns to 3rd base with the ball.  R3 steps off the bag and is tagged out by the 3rd baseman.",
+      "text": "3rd baseman asks for and gets time.  He confers with the pitcher and returns to 3rd base with the ball.  R3 steps off the bag and is tagged out by the 3rd baseman.",
       "rgsAnswers": [
         "R3 is out",
         "R3 is not out.",
@@ -56,7 +56,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Runner on 2nd steals third.  The pitch hits the batter and rolls away allowing the runner to continue and score.",
+      "text": "Runner on 2nd steals third.  The pitch hits the batter and rolls away allowing the runner to continue and score.",
       "rgsAnswers": [
         "Ball is live, Batter takes 1st base, R2 scores.",
         "Ball is dead, Batter takes 1st base, R2 is placed back a 2nd.",
@@ -91,7 +91,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Fielder throws the glove at a batted ball but does not touch the ball.",
+      "text": "Fielder throws the glove at a batted ball but does not touch the ball.",
       "rgsAnswers": [
         "Batter is awarded 3 bases.",
         "Batter is awarded 2 bases.",
@@ -126,7 +126,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a line drive over the head of the shortstop.  The shortstop throws his glove in the air and hits the ball with his glove.",
+      "text": "Batter hits a line drive over the head of the shortstop.  The shortstop throws his glove in the air and hits the ball with his glove.",
       "rgsAnswers": [
         "Each runner is awarded 3 bases",
         "Each runner is awarded 2 bases",
@@ -161,7 +161,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a ball deep to left field.  The left fielder holds his cap up to deflect the ball.  The umpire awards 3 bases.  The left fielder is slow to return the ball, and the batter (now on 3rd) runs home.",
+      "text": "Batter hits a ball deep to left field.  The left fielder holds his cap up to deflect the ball.  The umpire awards 3 bases.  The left fielder is slow to return the ball, and the batter (now on 3rd) runs home.",
       "rgsAnswers": [
         "BR must return to 3rd, ball is dead.",
         "BR scores",
@@ -196,7 +196,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Pitcher, from the pitching position, throws to 1st to catch R1 not standing on 1st.  The throw goes over F3's head and out of play.",
+      "text": "Pitcher, from the pitching position, throws to 1st to catch R1 not standing on 1st.  The throw goes over F3's head and out of play.",
       "rgsAnswers": [
         "All runners get 1 base.  R3 scores",
         "All runners get 2 bases.  R3 scores",
@@ -231,7 +231,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Umpire declares \"Infield Fly, Batter's Out\", but the fielder drops the ball intentionally.",
+      "text": "Umpire declares \"Infield Fly, Batter's Out\", but the fielder drops the ball intentionally.",
       "rgsAnswers": [
         "Ball is dead immediately, BR is out",
         "Ball is live, BR is out",
@@ -266,7 +266,7 @@
       "cOuts": 2,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a single, runner on second scores, runner on first base missed 2nd base and reaches third.  The defense properly appeals that he missed second.  Does the run count?",
+      "text": "Batter hits a single, runner on second scores, runner on first base missed 2nd base and reaches third.  The defense properly appeals that he missed second.  Does the run count?",
       "rgsAnswers": [
         "Yes",
         "No",
@@ -301,7 +301,7 @@
       "cOuts": 1,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a fly ball to the infield in front of 3rd base.  Umpire calls \"Infield Fly if Fair.\"  The 3rd baseman lets it drop in foul territory where it bounces fair.  Is the batter out?",
+      "text": "Batter hits a fly ball to the infield in front of 3rd base.  Umpire calls \"Infield Fly if Fair.\"  The 3rd baseman lets it drop in foul territory where it bounces fair.  Is the batter out?",
       "rgsAnswers": [
         "Yes",
         "No",
@@ -336,7 +336,7 @@
       "cOuts": 2,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter walks.  Catcher throws ball to first baseman.  The first baseman missed the throw into right field.  All runners score with the batter reaching 2nd.  The defense properly appeals that the batter missed first base.  The umpire agrees and calls the batter out.  How many runs score?",
+      "text": "Batter walks.  Catcher throws ball to first baseman.  The first baseman missed the throw into right field.  All runners score with the batter reaching 2nd.  The defense properly appeals that the batter missed first base.  The umpire agrees and calls the batter out.  How many runs score?",
       "rgsAnswers": [
         "3",
         "2",
@@ -371,7 +371,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a foul fly ball.  The catcher catches the ball and falls into the dugout.  He throws to first before R1 can return to the base.",
+      "text": "Batter hits a foul fly ball.  The catcher catches the ball and falls into the dugout.  He throws to first before R1 can return to the base.",
       "rgsAnswers": [
         "R1 is out",
         "R1 is allowed to first without liability",
@@ -406,7 +406,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The batter triples but misses second base. The defense properly appeals that he missed first base, but the umpire rules him safe. Can the defense now properly appeal that he missed 2nd base?",
+      "text": "The batter triples but misses second base. The defense properly appeals that he missed first base, but the umpire rules him safe. Can the defense now properly appeal that he missed 2nd base?",
       "rgsAnswers": [
         "Yes",
         "No",
@@ -441,7 +441,7 @@
       "cOuts": 0,
       "cBalls": 2,
       "cStrikes": 1,
-      "sQuestion": "Batting order B1, B2, B3, B4.  B2 is the correct batter, but B3 comes up to bat.  When the count is 2 balls and 1 strike, the defensive manager realizes the wrong batter is up and tells the umpire.",
+      "text": "Batting order B1, B2, B3, B4.  B2 is the correct batter, but B3 comes up to bat.  When the count is 2 balls and 1 strike, the defensive manager realizes the wrong batter is up and tells the umpire.",
       "rgsAnswers": [
         "B2 replaces B3 at the plate, the count is reset.",
         "B2 replaces B3 at the plate, the count remains 2 and 1.",
@@ -476,7 +476,7 @@
       "cOuts": 0,
       "cBalls": 2,
       "cStrikes": 1,
-      "sQuestion": "Batting order B1, B2, B3, B4.  B2 is the correct batter, but B3 comes up to bat.  The defense notices that the wrong batter is up and appeals that the batter should be out.",
+      "text": "Batting order B1, B2, B3, B4.  B2 is the correct batter, but B3 comes up to bat.  The defense notices that the wrong batter is up and appeals that the batter should be out.",
       "rgsAnswers": [
         "B2 replaces B3 at the plate, the count is reset.",
         "B2 replaces B3 at the plate, the count remains 2 and 1.",
@@ -511,7 +511,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batting order B1, B2, B3, B4.  B2 is the proper batter, but B3 comes up to bat.  1st pitch gets by the catcher, all runners advance (R3 scores).  B3 then hits a clean double, scoring the remaining 2 runners.  Defense appeals that B3 is out of order, before any more plays are made.  Sort this mess out.",
+      "text": "Batting order B1, B2, B3, B4.  B2 is the proper batter, but B3 comes up to bat.  1st pitch gets by the catcher, all runners advance (R3 scores).  B3 then hits a clean double, scoring the remaining 2 runners.  Defense appeals that B3 is out of order, before any more plays are made.  Sort this mess out.",
       "rgsAnswers": [
         "B3 is out, B2 is up.  Runners get to advance because of the passed ball, but the double is nullified.  One run total scores.",
         "B2 is out, B3 is up.  Runners get to advance because of the passed ball, but the double is nullified (B3 is removed).  One run total scores.",
@@ -546,7 +546,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a line drive into center field.  The center fielder throws to 3rd base before R2 reaches 3rd, but the throw flies into the stands.  Sort it out.",
+      "text": "Batter hits a line drive into center field.  The center fielder throws to 3rd base before R2 reaches 3rd, but the throw flies into the stands.  Sort it out.",
       "rgsAnswers": [
         "R2 scores, R1 goes to third, BR goes to 2nd.",
         "R2 to third, R1 to 2nd, BR to 1st.",
@@ -581,7 +581,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a line drive to right field.  The right fielder throws to 2nd base before R1 crosses 2nd base, but it sails through the infield, bouncing around for a while.  The ball finally settles into the dugout as R1 passes third base.  Who goes where?",
+      "text": "Batter hits a line drive to right field.  The right fielder throws to 2nd base before R1 crosses 2nd base, but it sails through the infield, bouncing around for a while.  The ball finally settles into the dugout as R1 passes third base.  Who goes where?",
       "rgsAnswers": [
         "R1 scores, BR to 3rd.",
         "R1 to 3rd, BR to 2nd.",
@@ -616,7 +616,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a slow roller down 3rd base line.  R1 was off running and motors past 2nd when the 3rd basemans throw flies over the 1st baseman's head.",
+      "text": "Batter hits a slow roller down 3rd base line.  R1 was off running and motors past 2nd when the 3rd basemans throw flies over the 1st baseman's head.",
       "rgsAnswers": [
         "R1 to 3rd, BR to 2nd",
         "R1 scores, BR to 3rd.",
@@ -651,7 +651,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a slow roller down 3rd base line.  R1 was off running and motors past 2nd and BR passes 1st when the 3rd baseman throws the ball over the 1st baseman and into the stands.",
+      "text": "Batter hits a slow roller down 3rd base line.  R1 was off running and motors past 2nd and BR passes 1st when the 3rd baseman throws the ball over the 1st baseman and into the stands.",
       "rgsAnswers": [
         "R1 to 3rd, BR to 2nd",
         "R1 scores, BR to 3rd.",
@@ -686,7 +686,7 @@
       "cOuts": 0,
       "cBalls": 2,
       "cStrikes": 2,
-      "sQuestion": "Batter swings and misses at strike 3, the pitch hits him and the ball bounces into the dugout.",
+      "text": "Batter swings and misses at strike 3, the pitch hits him and the ball bounces into the dugout.",
       "rgsAnswers": [
         "BR awarded 1st base, one run scores",
         "BR is out, runners remain at their bases",
@@ -721,7 +721,7 @@
       "cOuts": 1,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits an inside-the-park home run.  R1 misses home plate.  BR slides across home plate, avoiding the tag by the catcher.  R1 returns and tags home plate.  Catcher appeals that R1 is out.  What's the call?",
+      "text": "Batter hits an inside-the-park home run.  R1 misses home plate.  BR slides across home plate, avoiding the tag by the catcher.  R1 returns and tags home plate.  Catcher appeals that R1 is out.  What's the call?",
       "rgsAnswers": [
         "R1 is out",
         "R1 is safe",
@@ -756,7 +756,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a quick one-hopper to the 1st baseman. R1 returns to 1st.  1st baseman steps on the bag and tags R1.  Who is out?",
+      "text": "Batter hits a quick one-hopper to the 1st baseman. R1 returns to 1st.  1st baseman steps on the bag and tags R1.  Who is out?",
       "rgsAnswers": [
         "R1 is out, BR is safe",
         "R1 is safe, BR is out",
@@ -791,7 +791,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a grounder to the 3rd baseman, who gets R3 in a rundown between home and 3rd. R3 eludes a tag and returns to 3rd safely. Meanwhile, R2 is standing on 3rd also. Both are tagged. Who is out?",
+      "text": "Batter hits a grounder to the 3rd baseman, who gets R3 in a rundown between home and 3rd. R3 eludes a tag and returns to 3rd safely. Meanwhile, R2 is standing on 3rd also. Both are tagged. Who is out?",
       "rgsAnswers": [
         "R2 and R3 are out",
         "R2 is out",
@@ -826,7 +826,7 @@
       "cOuts": 1,
       "cBalls": 0,
       "cStrikes": 2,
-      "sQuestion": "R1 attempts to steal 2nd.  The catcher interferes with the batter, who strikes out, and then throws out R1 at 2nd base.  What's the call?",
+      "text": "R1 attempts to steal 2nd.  The catcher interferes with the batter, who strikes out, and then throws out R1 at 2nd base.  What's the call?",
       "rgsAnswers": [
         "Batter is awarded 1st and R1 is awarded 2nd",
         "Batter is out and R1 is out at 2nd",
@@ -861,7 +861,7 @@
       "cOuts": 2,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The third baseman (a starter) takes the mound with 2 outs and a runner at first. Without delivering a single pitch, the new pitcher successfully picks off R1, thus retiring the side. The manager now inserts a pinch-hitter for the pitcher, who is due to lead off the next half-inning. Is this legal",
+      "text": "The third baseman (a starter) takes the mound with 2 outs and a runner at first. Without delivering a single pitch, the new pitcher successfully picks off R1, thus retiring the side. The manager now inserts a pinch-hitter for the pitcher, who is due to lead off the next half-inning. Is this legal",
       "rgsAnswers": [
         "Yes",
         "No",
@@ -896,7 +896,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter takes the pitch. The catcher's throw back to the pitcher hits the still cocked bat of the batter. The ball bounces into the dugout and R1 goes to 3rd. Can he stay there?",
+      "text": "Batter takes the pitch. The catcher's throw back to the pitcher hits the still cocked bat of the batter. The ball bounces into the dugout and R1 goes to 3rd. Can he stay there?",
       "rgsAnswers": [
         "Yes",
         "No",
@@ -931,7 +931,7 @@
       "cOuts": 1,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The batter hits a ground ball to the 3rd baseman who gets R3 in a rundown. During the rundown, the catcher is taking off his mask as the ball is being thrown to him. He stops the ball with his mask, picks it up and tags R3. The batter is not yet at 1st base when this occurs. Place R3 & the batter",
+      "text": "The batter hits a ground ball to the 3rd baseman who gets R3 in a rundown. During the rundown, the catcher is taking off his mask as the ball is being thrown to him. He stops the ball with his mask, picks it up and tags R3. The batter is not yet at 1st base when this occurs. Place R3 & the batter",
       "rgsAnswers": [
         "BR to 1st, R3 scores",
         "BR to 2nd, R3 scores",
@@ -966,7 +966,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Grounder to the 3rd baseman who steps on 3rd and then throws the ball into the stands trying to retire the BR. R1 had reached 2nd before the throw but R3 and the BR had not reached their next base before the throw. Place R1, R3 and the BR.",
+      "text": "Grounder to the 3rd baseman who steps on 3rd and then throws the ball into the stands trying to retire the BR. R1 had reached 2nd before the throw but R3 and the BR had not reached their next base before the throw. Place R1, R3 and the BR.",
       "rgsAnswers": [
         "BR to 2nd, R1 scores, R3 scores",
         "BR to 1st, R1 to 2nd, R3 scores",
@@ -1001,7 +1001,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Grounder to short. The shortstop throws the ball into the stands attempting to pick the BR off 1st after he had made a wide turn. R2 was past 3rd at the time of the throw. Place R2 and the Batter.",
+      "text": "Grounder to short. The shortstop throws the ball into the stands attempting to pick the BR off 1st after he had made a wide turn. R2 was past 3rd at the time of the throw. Place R2 and the Batter.",
       "rgsAnswers": [
         "BR to 2nd, R2 scores",
         "BR to 3rd, R2 scores",
@@ -1036,7 +1036,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a single to right. The right fielder throws to first attempting to retire the batter after he makes a wide turn at 1st. The throw goes out-of-play. At the moment the ball went out-of-play the batter had already turned at 2nd.  Place the batter.",
+      "text": "Batter hits a single to right. The right fielder throws to first attempting to retire the batter after he makes a wide turn at 1st. The throw goes out-of-play. At the moment the ball went out-of-play the batter had already turned at 2nd.  Place the batter.",
       "rgsAnswers": [
         "2nd",
         "Home",
@@ -1071,7 +1071,7 @@
       "cOuts": 0,
       "cBalls": 1,
       "cStrikes": 1,
-      "sQuestion": "Pitcher delivers a strike right down the middle.  The batter's elbow is hit over the plate while he turns away from the ball.  The ball bounces away from the catcher while R1 advances to 2nd base.  Sort it out.",
+      "text": "Pitcher delivers a strike right down the middle.  The batter's elbow is hit over the plate while he turns away from the ball.  The ball bounces away from the catcher while R1 advances to 2nd base.  Sort it out.",
       "rgsAnswers": [
         "R1 goes to 2nd, BR is awarded 1st because he was hit.",
         "R1 stays at first, BR is out.",
@@ -1106,7 +1106,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Wild pitch gets past the catcher.  R3 breaks for home.  The catcher retrieves the ball, but does not throw to the pitcher covering home because the batter is in the way.",
+      "text": "Wild pitch gets past the catcher.  R3 breaks for home.  The catcher retrieves the ball, but does not throw to the pitcher covering home because the batter is in the way.",
       "rgsAnswers": [
         "R3 scores.",
         "R3 is out.",
@@ -1141,7 +1141,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "BR hits a bullet into left field.  R2 motors past third and breaks for home.  Left fielder has retrieved the ball and is about to throw home where the catcher is standing on home plate.  R2 slows down and slides short of the home plate where the catcher finally receives the ball and tags R2.",
+      "text": "BR hits a bullet into left field.  R2 motors past third and breaks for home.  Left fielder has retrieved the ball and is about to throw home where the catcher is standing on home plate.  R2 slows down and slides short of the home plate where the catcher finally receives the ball and tags R2.",
       "rgsAnswers": [
         "No obstruction.  R2 is out.",
         "Obstruction.  R2 is safe and scores.",
@@ -1176,7 +1176,7 @@
       "cOuts": 2,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "BR hits a clean double. R1 misses 2nd base and motors home,  R1 and R3 cross home plate.  Defensive team properly appeals.  What happens?",
+      "text": "BR hits a clean double. R1 misses 2nd base and motors home,  R1 and R3 cross home plate.  Defensive team properly appeals.  What happens?",
       "rgsAnswers": [
         "R1 is out on appeal, R3 scores.",
         "R1 is out on appeal, R3 does not score.",
@@ -1211,7 +1211,7 @@
       "cOuts": 2,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "BR hits a clean double. R2 misses 3rd base and motors home,  R2 and R3 cross home plate.  Defensive team properly appeals.  What happens?",
+      "text": "BR hits a clean double. R2 misses 3rd base and motors home,  R2 and R3 cross home plate.  Defensive team properly appeals.  What happens?",
       "rgsAnswers": [
         "R2 is out on appeal, R3 scores",
         "R2 is out on appeal, R3 does not score",
@@ -1246,7 +1246,7 @@
       "cOuts": 2,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "BR hits a bullet into right field and rolls all the way to the fence  R2 misses 3rd base and motors home.  R1 takes off and makes it home as well while the right fielder tracks down the ball.  Defensive team properly appeals.  What happens?",
+      "text": "BR hits a bullet into right field and rolls all the way to the fence  R2 misses 3rd base and motors home.  R1 takes off and makes it home as well while the right fielder tracks down the ball.  Defensive team properly appeals.  What happens?",
       "rgsAnswers": [
         "R2 is out on appeal.  BR scores",
         "R2 is out on appeal, BR does not score",
@@ -1281,7 +1281,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a slow roller down the first base line.  The first baseman comes down the line to field the ball while the BR is in fair territory.  The first baseman has to avoid the BR to field the ball, BR makes it to first safely.",
+      "text": "Batter hits a slow roller down the first base line.  The first baseman comes down the line to field the ball while the BR is in fair territory.  The first baseman has to avoid the BR to field the ball, BR makes it to first safely.",
       "rgsAnswers": [
         "BR is safe",
         "BR is out",
@@ -1316,7 +1316,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a slow roller down the first base line.  The first baseman comes down the line to field the ball while the BR is in the 3 foot lane (in foul territory.)  The first baseman has to avoid the BR to field the ball, BR makes it to first safely.",
+      "text": "Batter hits a slow roller down the first base line.  The first baseman comes down the line to field the ball while the BR is in the 3 foot lane (in foul territory.)  The first baseman has to avoid the BR to field the ball, BR makes it to first safely.",
       "rgsAnswers": [
         "BR is safe.",
         "BR is out",
@@ -1351,7 +1351,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "If a fielder is blocking the base path before he cathes a throw, it is always interference",
+      "text": "If a fielder is blocking the base path before he cathes a throw, it is always interference",
       "rgsAnswers": [
         "True",
         "False",
@@ -1386,7 +1386,7 @@
       "cOuts": 2,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter walks.  Catcher throws ball to first baseman, ball gets by him into right field.  All runners on base score with the batter reaching second.  The defense appeals that the batter-runner missed first.  The umpire agrees and calls him out.  How many runs score?",
+      "text": "Batter walks.  Catcher throws ball to first baseman, ball gets by him into right field.  All runners on base score with the batter reaching second.  The defense appeals that the batter-runner missed first.  The umpire agrees and calls him out.  How many runs score?",
       "rgsAnswers": [
         "0",
         "1",
@@ -1421,7 +1421,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "In order to properly appeal a play, what is *not* required:",
+      "text": "In order to properly appeal a play, what is *not* required:",
       "rgsAnswers": [
         "The ball must be in play",
         "The defense shall tag base or runner",
@@ -1456,7 +1456,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a ball to the right fielder.  The fielder's throw to first base goes out of play.\r\n\r\nAt the time of the throw, BR was 2 steps in front of 1st base, R1 was 2 steps beyond 2nd base, and R2 was on 3rd base.\r\n\r\nWhen the ball went out of play, BR had reached 1st base, R1 was half-way from 2nd to 3rd and R2 was half way home.\r\n\r\nUmpire should award:",
+      "text": "Batter hits a ball to the right fielder.  The fielder's throw to first base goes out of play.\r\n\r\nAt the time of the throw, BR was 2 steps in front of 1st base, R1 was 2 steps beyond 2nd base, and R2 was on 3rd base.\r\n\r\nWhen the ball went out of play, BR had reached 1st base, R1 was half-way from 2nd to 3rd and R2 was half way home.\r\n\r\nUmpire should award:",
       "rgsAnswers": [
         "BR to 2nd; R1 to 3rd; R2 to score",
         "BR to 2nd; R1 to score; R2 to score",
@@ -1491,7 +1491,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a line drive to left field.  R2 takes off for 3rd when the left fielder throws the ball in.  The throw is a little wide, and the 3rd baseman scrambles across baseline to receive the throw.  He collides with the batter as he catches the ball.",
+      "text": "Batter hits a line drive to left field.  R2 takes off for 3rd when the left fielder throws the ball in.  The throw is a little wide, and the 3rd baseman scrambles across baseline to receive the throw.  He collides with the batter as he catches the ball.",
       "rgsAnswers": [
         "Obstruction.  R2 is awarded home.",
         "Obstruction.  R2 is awarded 3rd.",
@@ -1526,7 +1526,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a line drive to center field.  The short stop sets up to receive the throw from the center fielder and R1 collides with him as he rounds 2nd.",
+      "text": "Batter hits a line drive to center field.  The short stop sets up to receive the throw from the center fielder and R1 collides with him as he rounds 2nd.",
       "rgsAnswers": [
         "Obstruction, R1 is awarded 2nd.",
         "Obstruction, R1 is awarded 3rd",
@@ -1561,7 +1561,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Ground ball hit to 2nd baseman.  R1 slows down in front of the ball to obscure the view of the 2nd baseman fielding the ball.  R3 scores.",
+      "text": "Ground ball hit to 2nd baseman.  R1 slows down in front of the ball to obscure the view of the 2nd baseman fielding the ball.  R3 scores.",
       "rgsAnswers": [
         "Dead Ball. R1 is out.  BR is out.  R3 does not score",
         "Dead ball. R1 is out.  R3 does not score",
@@ -1596,7 +1596,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Runner on first, one out. Batter hits a line drive up the middle. Second baseman makes a great stab, catches the ball on fly and throws to first base. Runner on first beats throw back to avoid double play, but overruns base while first baseman is standing on base with ball.  What's the call?",
+      "text": "Runner on first, one out. Batter hits a line drive up the middle. Second baseman makes a great stab, catches the ball on fly and throws to first base. Runner on first beats throw back to avoid double play, but overruns base while first baseman is standing on base with ball.  What's the call?",
       "rgsAnswers": [
         "BR is out, R1 is out.",
         "BR is out, R1 is safe.",
@@ -1631,7 +1631,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The runner on first base is stealing as the ball is fouled into the catcher’s mask and drops into the glove of the catcher. The defensive manager wants the runner now on second base to return to first base because of the foul ball. The umpire disagrees and allows the runner to remain at second because it went sharp and direct into the catchers body, so it’s a foul tip.",
+      "text": "The runner on first base is stealing as the ball is fouled into the catcher’s mask and drops into the glove of the catcher. The defensive manager wants the runner now on second base to return to first base because of the foul ball. The umpire disagrees and allows the runner to remain at second because it went sharp and direct into the catchers body, so it’s a foul tip.",
       "rgsAnswers": [
         "True",
         "False",
@@ -1666,7 +1666,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "A long fly ball down the right field foul line is very near the fence. The right fielder charges over to the fence and reaches up and is about to catch the ball on the playing field when a spectator reaches across the fence and catches a souvenir ball, clearly interfering with the fielder attempting to catch the batted ball. The umpire calls the batter out because of the spectator interference.",
+      "text": "A long fly ball down the right field foul line is very near the fence. The right fielder charges over to the fence and reaches up and is about to catch the ball on the playing field when a spectator reaches across the fence and catches a souvenir ball, clearly interfering with the fielder attempting to catch the batted ball. The umpire calls the batter out because of the spectator interference.",
       "rgsAnswers": [
         "True",
         "False",
@@ -1701,7 +1701,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The game is over and the manager of the losing team realizes that the winning team used a pitcher that was an ineligible pitcher for the game and protests before the umpire(s) leave the field. The umpire(s) does not allow the protest because the manager should have protested before the game was over.",
+      "text": "The game is over and the manager of the losing team realizes that the winning team used a pitcher that was an ineligible pitcher for the game and protests before the umpire(s) leave the field. The umpire(s) does not allow the protest because the manager should have protested before the game was over.",
       "rgsAnswers": [
         "True",
         "False",
@@ -1736,7 +1736,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The batter is not happy with the ball and strike calls of the umpire. To show his/her displeasure with the umpire, the batter refuses to get into the batter’s box when told to do so by the umpire. The umpire ejects the player.",
+      "text": "The batter is not happy with the ball and strike calls of the umpire. To show his/her displeasure with the umpire, the batter refuses to get into the batter’s box when told to do so by the umpire. The umpire ejects the player.",
       "rgsAnswers": [
         "True",
         "False",
@@ -1771,7 +1771,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The batter crushes a fastball down the left field line that has extra bases written all over it. The left fielder thinks the same thing and throws his/her glove at the ball and hits the ball with the glove. Unfortunately this knocks the ball even further away from the left fielder. The batter-runner puts it into high gear in the attempt for an inside the park home run and is thrown out at the plate.",
+      "text": "The batter crushes a fastball down the left field line that has extra bases written all over it. The left fielder thinks the same thing and throws his/her glove at the ball and hits the ball with the glove. Unfortunately this knocks the ball even further away from the left fielder. The batter-runner puts it into high gear in the attempt for an inside the park home run and is thrown out at the plate.",
       "rgsAnswers": [
         "Run scores",
         "Ball is dead, runner is returned to 3rd base",
@@ -1806,7 +1806,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The centerfielder fires the ball from centerfield in an attempt to get the runner trying to make it to third on the base hit. The ball sails and ends up in the parking lot. At the time of the throw the lead runner was between second and third and the batter-runner was between home and first base.",
+      "text": "The centerfielder fires the ball from centerfield in an attempt to get the runner trying to make it to third on the base hit. The ball sails and ends up in the parking lot. At the time of the throw the lead runner was between second and third and the batter-runner was between home and first base.",
       "rgsAnswers": [
         "R1 to 2nd, BR to 1st.",
         "R1 to 3rd, BR to 1st",
@@ -1841,7 +1841,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The batter strokes a ball deep to the outfield and in running the bases has to change direction to avoid a collision with the shortstop. In the umpires judgment the batter-runner would have made it to third base had there been no change of direction. The ball reaches third base ahead of the batter-runner and the batter-runner is tagged. The umpire immediately calls “Time” identifies the obstruction on the shortstop and awards the batter-runner third base.",
+      "text": "The batter strokes a ball deep to the outfield and in running the bases has to change direction to avoid a collision with the shortstop. In the umpires judgment the batter-runner would have made it to third base had there been no change of direction. The ball reaches third base ahead of the batter-runner and the batter-runner is tagged. The umpire immediately calls “Time” identifies the obstruction on the shortstop and awards the batter-runner third base.",
       "rgsAnswers": [
         "True",
         "False",
@@ -1876,7 +1876,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The second baseman takes the strong and accurate throw from the right fielder and is waiting for the batter-runner to come into second base. The batter-runner seeing that he/she is a dead duck, intentionally barrels into the second baseman and knocks the ball loose. The umpire calls the batter-runner out for not sliding or attempting to go around the fielder.",
+      "text": "The second baseman takes the strong and accurate throw from the right fielder and is waiting for the batter-runner to come into second base. The batter-runner seeing that he/she is a dead duck, intentionally barrels into the second baseman and knocks the ball loose. The umpire calls the batter-runner out for not sliding or attempting to go around the fielder.",
       "rgsAnswers": [
         "True",
         "False",
@@ -1911,7 +1911,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Runner on first base and the batter lofts a fly ball to the right fielder. The runner on first advances only a few steps off first base, watching to see if the ball is caught. The batter-runner passes the lead runner also watching to see if the ball is caught; the ball is dropped and the lead runner hustles to third base and the batter-runner ends up at second base. The umpire calls “time” and calls the runner at third base out for allowing the batter-runner to pass.",
+      "text": "Runner on first base and the batter lofts a fly ball to the right fielder. The runner on first advances only a few steps off first base, watching to see if the ball is caught. The batter-runner passes the lead runner also watching to see if the ball is caught; the ball is dropped and the lead runner hustles to third base and the batter-runner ends up at second base. The umpire calls “time” and calls the runner at third base out for allowing the batter-runner to pass.",
       "rgsAnswers": [
         "True",
         "False",
@@ -1946,7 +1946,7 @@
       "cOuts": 1,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "With the winning run on third base and one out the batter hits a fly ball to shallow centerfield. The base coach has the runner tag up at third base. At the last second, the third base coach thinking the runner will be thrown out at home, puts out his/her arms and slaps the runner to get their attention. The runner ignores his coach and runs home, scoring the winning run. What do you do?",
+      "text": "With the winning run on third base and one out the batter hits a fly ball to shallow centerfield. The base coach has the runner tag up at third base. At the last second, the third base coach thinking the runner will be thrown out at home, puts out his/her arms and slaps the runner to get their attention. The runner ignores his coach and runs home, scoring the winning run. What do you do?",
       "rgsAnswers": [
         "Wait for the play to complete, then eject the base coach for coaches interference.",
         "Call \"Time!\" R3 is out for coaches interference, inning is over.",
@@ -1981,7 +1981,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The runner on second base scores on a base hit, but fails to touch third base on the way home. The ball is finally thrown to the infield and the defense requests “time”. After time is called the defense appeals to the umpire that the runner who just scored missed third base. The umpire agrees and calls the runner out for missing third base.",
+      "text": "The runner on second base scores on a base hit, but fails to touch third base on the way home. The ball is finally thrown to the infield and the defense requests “time”. After time is called the defense appeals to the umpire that the runner who just scored missed third base. The umpire agrees and calls the runner out for missing third base.",
       "rgsAnswers": [
         "True",
         "False",
@@ -2016,7 +2016,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The power to forfeit a game lies with any and all umpires who are involved in the game.",
+      "text": "The power to forfeit a game lies with any and all umpires who are involved in the game.",
       "rgsAnswers": [
         "True",
         "False",
@@ -2051,7 +2051,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The home plate umpire declares all infield flies, because it is only the home plate umpire that has infield fly responsibilities.",
+      "text": "The home plate umpire declares all infield flies, because it is only the home plate umpire that has infield fly responsibilities.",
       "rgsAnswers": [
         "True",
         "False",
@@ -2086,7 +2086,7 @@
       "cOuts": 2,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a clean triple to right field where the ball rattles around in the corner.  As the batter motors past 1st, he misses the 1st base bag.  When the ball gets back to the infield, the defense properly appeals that the Batter missed 1st base.",
+      "text": "Batter hits a clean triple to right field where the ball rattles around in the corner.  As the batter motors past 1st, he misses the 1st base bag.  When the ball gets back to the infield, the defense properly appeals that the Batter missed 1st base.",
       "rgsAnswers": [
         "BR is out.  3 runs score.",
         "BR is out.  No runs score.",
@@ -2121,7 +2121,7 @@
       "cOuts": 1,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a line drive down 1st base line.  R3 scores.  R2 scores.  R1 is thrown out at the plate.  The defense properly appeals that BR never touched first base.",
+      "text": "Batter hits a line drive down 1st base line.  R3 scores.  R2 scores.  R1 is thrown out at the plate.  The defense properly appeals that BR never touched first base.",
       "rgsAnswers": [
         "3 outs, no runs score.",
         "3 outs, 2 runs score.",
@@ -2156,7 +2156,7 @@
       "cOuts": 1,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "With a runner on first and third base and one out, the batter hits a fly ball to right field. R1 goes almost all the way to second thinking the ball will not be caught. The right fielder makes a great catch and throws the ball into the first baseman who tags first for the third out of the inning after R3 has crossed the plate.",
+      "text": "With a runner on first and third base and one out, the batter hits a fly ball to right field. R1 goes almost all the way to second thinking the ball will not be caught. The right fielder makes a great catch and throws the ball into the first baseman who tags first for the third out of the inning after R3 has crossed the plate.",
       "rgsAnswers": [
         "3 outs, R3 scores.",
         "3 outs, R3 does not score.",
@@ -2191,7 +2191,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The batter hits a ball into deep centerfield. While the BR is rounding first base he collides with the first baseman knocking down the BR. The base umpire immediately calls “Time” and awards the batter-runner second base.",
+      "text": "The batter hits a ball into deep centerfield. While the BR is rounding first base he collides with the first baseman knocking down the BR. The base umpire immediately calls “Time” and awards the batter-runner second base.",
       "rgsAnswers": [
         "True",
         "False",
@@ -2226,7 +2226,7 @@
       "cOuts": 0,
       "cBalls": 2,
       "cStrikes": 2,
-      "sQuestion": "The count on the batter is two balls and two strikes. The pitcher delivers ball three to the batter and the catcher throws the ball back to the pitcher. While the batter is adjusting his/her batting glove the pitcher toes the pitcher’s plate and fires strike three. The manager of the offensive team argues that this is a quick return pitch and should not be allowed. The umpire rules in favor of the defense – strike three.",
+      "text": "The count on the batter is two balls and two strikes. The pitcher delivers ball three to the batter and the catcher throws the ball back to the pitcher. While the batter is adjusting his/her batting glove the pitcher toes the pitcher’s plate and fires strike three. The manager of the offensive team argues that this is a quick return pitch and should not be allowed. The umpire rules in favor of the defense – strike three.",
       "rgsAnswers": [
         "True",
         "False",
@@ -2261,7 +2261,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The batter steps into the batter’s box and promptly strokes a single on the first pitch. The defensive manager comes out to the umpire and appeals to the umpire that the offensive team is batting out of order. In checking this out, the umpire determines that the batter is an unannounced substitute batter and rules the runner is allowed to stay on first.",
+      "text": "The batter steps into the batter’s box and promptly strokes a single on the first pitch. The defensive manager comes out to the umpire and appeals to the umpire that the offensive team is batting out of order. In checking this out, the umpire determines that the batter is an unannounced substitute batter and rules the runner is allowed to stay on first.",
       "rgsAnswers": [
         "True",
         "False",
@@ -2296,7 +2296,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Continuous batting order.  In the top of the third inning the visiting team has a player that becomes ill and must leave the game. In the top of the fifth inning, the player is feeling better and the visiting manager inserts the player back into the original spot in the batting order and the game continues. The home team manager protests and the umpire agrees that the player can’t return.",
+      "text": "Continuous batting order.  In the top of the third inning the visiting team has a player that becomes ill and must leave the game. In the top of the fifth inning, the player is feeling better and the visiting manager inserts the player back into the original spot in the batting order and the game continues. The home team manager protests and the umpire agrees that the player can’t return.",
       "rgsAnswers": [
         "True",
         "False",
@@ -2331,7 +2331,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "A manager is ejected from the game on Saturday. His team is scheduled to play on Wednesday but the game is forfeited. Since his next game is scheduled for Friday, the manager will be allowed to be in attendance at the game site since he served his suspension on Wednesday.",
+      "text": "A manager is ejected from the game on Saturday. His team is scheduled to play on Wednesday but the game is forfeited. Since his next game is scheduled for Friday, the manager will be allowed to be in attendance at the game site since he served his suspension on Wednesday.",
       "rgsAnswers": [
         "True",
         "False",
@@ -2366,7 +2366,7 @@
       "cOuts": 2,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The game is tied in the bottom of the sixth inning (7th for Intermediates/Jr/Sr).  The batter hits a sharp ground ball to the second baseman that misses the ball; however, the right fielder makes a super play and throws to first base in time to get the third out.",
+      "text": "The game is tied in the bottom of the sixth inning (7th for Intermediates/Jr/Sr).  The batter hits a sharp ground ball to the second baseman that misses the ball; however, the right fielder makes a super play and throws to first base in time to get the third out.",
       "rgsAnswers": [
         "Game over, R3 scores",
         "R3 does not score",
@@ -2401,7 +2401,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The batter tips the ball and it goes straight down and hits the plate and then rolls in front of the plate. The catcher pounces on the ball and gets set to throw to first. The batter-runner is running inside the first baseline toward first base only a quarter of the way down the line when the catcher throws the ball hitting the batter-runner. The batter-runner is called out for interference.",
+      "text": "The batter tips the ball and it goes straight down and hits the plate and then rolls in front of the plate. The catcher pounces on the ball and gets set to throw to first. The batter-runner is running inside the first baseline toward first base only a quarter of the way down the line when the catcher throws the ball hitting the batter-runner. The batter-runner is called out for interference.",
       "rgsAnswers": [
         "True",
         "False",
@@ -2436,7 +2436,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Debbie is scheduled to bat but Erica steps into the box and promptly strokes a double to right centerfield. The defensive team appeals to the home plate umpire before the next pitch or play. The umpire recognizes that Debbie was scheduled to bat and that Erica batted out of turn. The umpire calls Erica out and removes her from second base.",
+      "text": "Debbie is scheduled to bat but Erica steps into the box and promptly strokes a double to right centerfield. The defensive team appeals to the home plate umpire before the next pitch or play. The umpire recognizes that Debbie was scheduled to bat and that Erica batted out of turn. The umpire calls Erica out and removes her from second base.",
       "rgsAnswers": [
         "True",
         "False",
@@ -2471,7 +2471,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The third batter is scheduled to bat but the fourth batter hits a single. The sixth batter now bats and takes ball one. The defensive team calls “Time” and tells the umpire something is wrong. The umpire looks over the line-up card and sees that indeed third batter should have batted… Sort it out…",
+      "text": "The third batter is scheduled to bat but the fourth batter hits a single. The sixth batter now bats and takes ball one. The defensive team calls “Time” and tells the umpire something is wrong. The umpire looks over the line-up card and sees that indeed third batter should have batted… Sort it out…",
       "rgsAnswers": [
         "3rd batter is out, 4th batter removed from base and takes the batter's box, count 1-0",
         "3rd batter is out, 4th batter removed from base.  5th batter takes the batter's box, count 1-0",
@@ -2506,7 +2506,7 @@
       "cOuts": 2,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Bottom of the 6th.  Down by 2 runs.  Batter knocks one out of the park.  R1 is so excited, he misses 3rd base.  Everyone leaves the field before the defensive manager starts shouting at everyone to appeal.  The players run back on the field.  The pitcher, with the ball, steps back from the rubber with his pivot foot and announces he wants to appeal that R1 missed 3rd base.  When the crowd finally quiets down, what do you do?",
+      "text": "Bottom of the 6th.  Down by 2 runs.  Batter knocks one out of the park.  R1 is so excited, he misses 3rd base.  Everyone leaves the field before the defensive manager starts shouting at everyone to appeal.  The players run back on the field.  The pitcher, with the ball, steps back from the rubber with his pivot foot and announces he wants to appeal that R1 missed 3rd base.  When the crowd finally quiets down, what do you do?",
       "rgsAnswers": [
         "R2 scores, R3 scores.  R1 is out.  Tie game.",
         "Noone scores.  R1 is out.  Game over.",
@@ -2541,7 +2541,7 @@
       "cOuts": 2,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Bottom of the 6th (or 7th for Int/Jr/Sr).  Down by 2 runs.  Batter knocks one out of the park.  R1 is so excited, he misses 3rd base.  The infielders start leaving the field before the centerfielder runs into the infield shouting at everyone to appeal.  The players run back on the field.  The pitcher, with the ball, steps back from the rubber with his pivot foot and announces he wants to appeal that R1 missed 3rd base.  When the crowd finally quiets down, what do you do?",
+      "text": "Bottom of the 6th (or 7th for Int/Jr/Sr).  Down by 2 runs.  Batter knocks one out of the park.  R1 is so excited, he misses 3rd base.  The infielders start leaving the field before the centerfielder runs into the infield shouting at everyone to appeal.  The players run back on the field.  The pitcher, with the ball, steps back from the rubber with his pivot foot and announces he wants to appeal that R1 missed 3rd base.  When the crowd finally quiets down, what do you do?",
       "rgsAnswers": [
         "R2 scores, R3 scores.  R1 is out.  Tie game.",
         "Noone scores.  R1 is out.  Game over.",
@@ -2576,7 +2576,7 @@
       "cOuts": 2,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Bottom of the 6th (or 7th for Int/Jr/Sr).  Down by 2 runs.  Batter knocks one out of the park.  R1 is so excited, he misses 2nd base.  The infielders start leaving the field before the centerfielder runs into the infield shouting at everyone to appeal.  The players run back on the field.  The pitcher, with the ball, steps back from the rubber with his pivot foot and announces he wants to appeal that R1 missed 2nd base.  When the crowd finally quiets down, what do you do?",
+      "text": "Bottom of the 6th (or 7th for Int/Jr/Sr).  Down by 2 runs.  Batter knocks one out of the park.  R1 is so excited, he misses 2nd base.  The infielders start leaving the field before the centerfielder runs into the infield shouting at everyone to appeal.  The players run back on the field.  The pitcher, with the ball, steps back from the rubber with his pivot foot and announces he wants to appeal that R1 missed 2nd base.  When the crowd finally quiets down, what do you do?",
       "rgsAnswers": [
         "R2 scores, R3 scores.  R1 is out.  Tie game.",
         "Noone scores.  R1 is out.  Game over.",
@@ -2611,7 +2611,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "In the top of the 3rd inning, the home team is already up 12 to 1.  Seeing an easy victory, the home team manager pulls Billy, his ace, off the mound and moves him to right field.  The games turns bad for them, and in the top of the 7th inning, the game is now 12 to 11.  Fearing a loss, the home team's manager puts Billy back on the mound to close out the game.",
+      "text": "In the top of the 3rd inning, the home team is already up 12 to 1.  Seeing an easy victory, the home team manager pulls Billy, his ace, off the mound and moves him to right field.  The games turns bad for them, and in the top of the 7th inning, the game is now 12 to 11.  Fearing a loss, the home team's manager puts Billy back on the mound to close out the game.",
       "rgsAnswers": [
         "Legal",
         "Illegal",
@@ -2646,7 +2646,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a slow roller down the first base line.  BR takes off for first base. As he is approaching 1st base, his left foot is to the left of the foul line and right foot to the right of the foul line.  The catcher comes up with the ball and makes a good throw to first base.  F3 loses the ball in flight and he fails to catch it. BR makes it to first safely.",
+      "text": "Batter hits a slow roller down the first base line.  BR takes off for first base. As he is approaching 1st base, his left foot is to the left of the foul line and right foot to the right of the foul line.  The catcher comes up with the ball and makes a good throw to first base.  F3 loses the ball in flight and he fails to catch it. BR makes it to first safely.",
       "rgsAnswers": [
         "BR is safe",
         "BR is out",
@@ -2681,7 +2681,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a slow roller down the first base line.  BR takes off for first base, with his left foot to the left of the foul line and right foot to the right of the foul line.  The catcher comes up with the ball and upon seeing the batter runner, tries to throw it over the batter's head.  The ball sails over the first basemans head, well out of reach of the first baseman.  BR makes it to first safely.",
+      "text": "Batter hits a slow roller down the first base line.  BR takes off for first base, with his left foot to the left of the foul line and right foot to the right of the foul line.  The catcher comes up with the ball and upon seeing the batter runner, tries to throw it over the batter's head.  The ball sails over the first basemans head, well out of reach of the first baseman.  BR makes it to first safely.",
       "rgsAnswers": [
         "BR is safe",
         "BR is out",
@@ -2716,7 +2716,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "3rd baseman walks over to the pitcher.  He confers with the pitcher on the mound (but not on the pitching rubber) and returns to 3rd base with the ball. R3 steps off the bag and is tagged out by the 3rd baseman.",
+      "text": "3rd baseman walks over to the pitcher.  He confers with the pitcher on the mound (but not on the pitching rubber) and returns to 3rd base with the ball. R3 steps off the bag and is tagged out by the 3rd baseman.",
       "rgsAnswers": [
         "R3 is out",
         "R3 is not out.",
@@ -2751,7 +2751,7 @@
       "cOuts": 1,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Batter hits a high fly ball above the shortstop. R2 takes off on contact and F6 runs into R2 and is unable to catch the ball.",
+      "text": "Batter hits a high fly ball above the shortstop. R2 takes off on contact and F6 runs into R2 and is unable to catch the ball.",
       "rgsAnswers": [
         "Ball is dead immediately on the infield fly. Batter is out. All runners return",
         "Infield fly, batter is out, R2 is out for interference. Ball is dead, all runners return. 3 outs, inning over.",
@@ -2786,7 +2786,7 @@
       "cOuts": 2,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "The third baseman takes the mound with 2 outs and a runner at first. Without delivering a single pitch, the new pitcher successfully picks off R1, thus retiring the side. After scoring 10 runs in the next half inning, the manager decides to go deep into his bench and replace the pitcher. Is this legal?",
+      "text": "The third baseman takes the mound with 2 outs and a runner at first. Without delivering a single pitch, the new pitcher successfully picks off R1, thus retiring the side. After scoring 10 runs in the next half inning, the manager decides to go deep into his bench and replace the pitcher. Is this legal?",
       "rgsAnswers": [
         "Yes",
         "No",
@@ -2821,7 +2821,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Left handed batter. Wild pitch gets past the catcher.  R3 breaks for home and R1 to 2nd.  The catcher retrieves the ball but the pitcher isn't covering home, so the catcher decides to throw to 2nd to get R1 out. The catcher has to hold up because the batter is still in the batters box having not moved.",
+      "text": "Left handed batter. Wild pitch gets past the catcher.  R3 breaks for home and R1 to 2nd.  The catcher retrieves the ball but the pitcher isn't covering home, so the catcher decides to throw to 2nd to get R1 out. The catcher has to hold up because the batter is still in the batters box having not moved.",
       "rgsAnswers": [
         "R3 scores, R1 to 2nd.",
         "R3 is out for batter's interference",
@@ -2856,7 +2856,7 @@
       "cOuts": 0,
       "cBalls": 0,
       "cStrikes": 0,
-      "sQuestion": "Left handed batter. Wild pitch gets past the catcher.  R3 breaks for home.  The catcher retrieves the ball with the pitcher covering home. The catcher doesn't throw because the batter is still in the batters box having not moved.",
+      "text": "Left handed batter. Wild pitch gets past the catcher.  R3 breaks for home.  The catcher retrieves the ball with the pitcher covering home. The catcher doesn't throw because the batter is still in the batters box having not moved.",
       "rgsAnswers": [
         "R3 scores, BR didn't make a move to hinder the catcher",
         "R3 is out for batter's interference",

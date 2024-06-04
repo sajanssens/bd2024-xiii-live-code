@@ -1,14 +1,14 @@
 package com.infosupport.repos;
 
 import com.infosupport.domain.Question;
-import jakarta.enterprise.context.Dependent;
+import jakarta.enterprise.context.ApplicationScoped;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@Dependent // since bean-discovery-mode="annotated"
+@ApplicationScoped // since bean-discovery-mode="annotated"
 public class QuestionRepo {
 
     private final AtomicInteger lastId = new AtomicInteger(1);
@@ -39,7 +39,8 @@ public class QuestionRepo {
     }
 
     public void delete(int id) {
-        this.questions.removeIf(q -> q.getId() == id);
+        System.out.println("delete " + id);
+        System.out.println(this.questions.removeIf(q -> q.getId() == id));
     }
 
     private int nextId() {

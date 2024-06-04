@@ -1,5 +1,5 @@
 export interface Question {
   id: number
-  sQuestion: String
+  text: String
   cStrikes?: number;
 }

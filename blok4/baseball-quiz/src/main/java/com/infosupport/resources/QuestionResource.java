@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
 
 // .../baseball-quiz/api/questions/{id}
-@NoArgsConstructor(force = true)
+@NoArgsConstructor
 @Dependent // since bean-discovery-mode="annotated"
 public class QuestionResource {
 

@@ -27,7 +27,7 @@
       <tr>
         <td>{{ q.id }}</td>
         <td><i routerLink="{{q.id}}" class="fa-solid fa-circle-info"></i></td>
-        <td>{{ q.sQuestion }}</td>
+        <td>{{ q.text }}</td>
         <td>
           <i routerLink="/questions/{{q.id}}" class="fa-solid fa-pencil pointer-hand" style='color: #0044ff;'></i>
           <i (click)="remove(q.id)" class="m-2 fa-solid fa-square-xmark pointer-hand" style='color: #ff0303;'></i>

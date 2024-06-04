@@ -19,10 +19,10 @@ export class HomeComponent {
   imgloc = 'img/umpire.jpg';
 
   questions: Question[] = [
-    {id: 1, sQuestion: "Batter runs from ..."},
-    {id: 2, sQuestion: "Batter runs from ..."},
-    {id: 3, sQuestion: "Batter runs from ..."},
-    {id: 4, sQuestion: "Batter runs from ..."},
+    {id: 1, text: "Batter runs from ..."},
+    {id: 2, text: "Batter runs from ..."},
+    {id: 3, text: "Batter runs from ..."},
+    {id: 4, text: "Batter runs from ..."},
   ];
 
   isHidden: boolean = true;

@@ -9,11 +9,11 @@
              [(ngModel)]="question.id">
     }
 
-    <label for="sQuestion" class="form-label">Question<span>{{ asterisk(sQuestion) }}</span></label>
+    <label for="text" class="form-label">Question<span>{{ asterisk(qText) }}</span></label>
     <textarea type="text" rows="5" class="form-control mb-2"
-              id="sQuestion" name="sQuestion"
+              id="text" name="text"
               required
-              [(ngModel)]="question.sQuestion" #sQuestion="ngModel"></textarea>
+              [(ngModel)]="question.text" #qText="ngModel"></textarea>
 
     <label for="cStrikes" class="form-label">Strikes</label>
     <input type="number" class="form-control mb-2"
