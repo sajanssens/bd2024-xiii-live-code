@@ -10,6 +10,10 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
+import org.eclipse.microprofile.openapi.annotations.OpenAPIDefinition;
+import org.eclipse.microprofile.openapi.annotations.Operation;
+import org.eclipse.microprofile.openapi.annotations.info.Info;
+import org.eclipse.microprofile.openapi.annotations.parameters.Parameter;
 
 import java.util.List;
 
@@ -17,7 +21,11 @@ import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
 
 // .../baseball-quiz/api/questions
 @Path("questions")
+@OpenAPIDefinition(info = @Info(title = "QuestionsResource", description = "Some cool info...", version = "1"))
 public class QuestionsResource {
+
+    // Zie hier voor alle mogelijkheden om je endpoints extra te documenteren:
+    // https://download.eclipse.org/microprofile/microprofile-open-api-1.0/microprofile-openapi-spec.html#_documentation_mechanisms
 
     @Inject
     private QuestionRepo repo;
@@ -25,8 +33,11 @@ public class QuestionsResource {
     @Inject
     private QuestionResource questionResource;
 
+    @Operation(description = "Returns all questions when no query string is included.")
     @GET @Produces(APPLICATION_JSON)
-    public List<Question> getList(@QueryParam("question") String question) {
+    public List<Question> getList(
+            @Parameter(description = "to search on question text (containing)")
+            @QueryParam("question") String question) {
         if (question == null || question.isBlank()) {
             return repo.readAll();
         }
