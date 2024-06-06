@@ -10,13 +10,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import static jakarta.persistence.GenerationType.IDENTITY;
+
 @XmlRootElement
 @Data
 @NoArgsConstructor
 @Builder @AllArgsConstructor
 @Entity
 public class Question {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = IDENTITY)
     private int id;
     private String text;
+    private int cStrikes;
 }

@@ -8,7 +8,7 @@
         <!--        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>-->
         <jta-data-source>jdbc/mySqlDatasource</jta-data-source>
         <properties>
-            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
             <!--            <property name="jakarta.persistence.sql-load-script-source" value="dummy.sql"/>-->
         </properties>
     </persistence-unit>

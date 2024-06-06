@@ -10,7 +10,6 @@ import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import lombok.NoArgsConstructor;
 
@@ -41,11 +40,10 @@ public class QuestionResource {
     @PUT
     @Produces(APPLICATION_JSON) @Consumes(APPLICATION_JSON)
     public Question edit(Question q) {
-        get().setText(q.getText());
-        return q;
+        return repo.update(q);
     }
 
-    public QuestionResource withId(int id) {
+    public QuestionResource with(int id) {
         this.id = id;
         return this;
     }

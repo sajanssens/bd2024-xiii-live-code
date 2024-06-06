@@ -54,7 +54,7 @@ public class QuestionsResource {
     }
 
     @Path("{id}")
-    public QuestionResource getQuestionsResource(@PathParam("id") int i) {
-        return questionResource.withId(i);
+    public QuestionResource toQuestionResource(@PathParam("id") int id) {
+        return questionResource.with(id);
     }
 }
