@@ -2,6 +2,9 @@ package com.infosupport.repos;
 
 import com.infosupport.domain.Question;
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +13,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @ApplicationScoped // since bean-discovery-mode="annotated"
 public class QuestionRepo {
+
+    @PersistenceContext(name = "MySQL")
+    private EntityManager em;
 
     private final AtomicInteger lastId = new AtomicInteger(1);
 
@@ -22,9 +28,9 @@ public class QuestionRepo {
             Question.builder().id(nextId()).text("test6").build()
     ));
 
+    @Transactional
     public Question create(Question q) {
-        q.setId(nextId());
-        questions.add(q);
+        em.persist(q);
         return q;
     }
 

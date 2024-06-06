@@ -9,6 +9,8 @@ import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.PUT;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import lombok.NoArgsConstructor;
 
@@ -21,6 +23,9 @@ public class QuestionResource {
 
     @Inject
     private QuestionRepo repo;
+    @Inject
+    private QuestionAnswersResource questionAnswersResource;
+
     private int id;
 
     @GET @Produces(APPLICATION_JSON)
@@ -40,9 +45,15 @@ public class QuestionResource {
         return q;
     }
 
-    public QuestionResource with(int id) {
+    public QuestionResource withId(int id) {
         this.id = id;
         return this;
     }
+
+    @Path("answers")
+    public QuestionAnswersResource getQuestionsResource() {
+        return questionAnswersResource;
+    }
+
 }
 

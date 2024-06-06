@@ -19,15 +19,15 @@
         </properties>
     </persistence-unit>
 
-    <persistence-unit name="MySQL">
-        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <persistence-unit name="MySQL" transaction-type="RESOURCE_LOCAL">
+<!--        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>-->
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3307/jpa-with-jse"/>
             <property name="jakarta.persistence.jdbc.user" value="root"/>
             <property name="jakarta.persistence.jdbc.password" value="root"/>
             <property name="jakarta.persistence.sql-load-script-source" value="data.sql"/>
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
         </properties>
     </persistence-unit>
 
