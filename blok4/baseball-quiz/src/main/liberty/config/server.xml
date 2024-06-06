@@ -17,6 +17,8 @@
 
     <applicationManager autoExpand="true"/>
 
+    <logging traceSpecification="JPA=all"/>
+
     <!--FOR JPA:  ******************************************** -->
     <!-- MySQL for production -->
     <library id="MySQLLib">
