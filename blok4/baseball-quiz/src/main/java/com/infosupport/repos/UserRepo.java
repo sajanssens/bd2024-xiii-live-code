@@ -1,12 +1,12 @@
 package com.infosupport.repos;
 
 import com.infosupport.domain.User;
-import jakarta.inject.Named;
+import jakarta.enterprise.context.ApplicationScoped;
 
 import static com.infosupport.domain.User.FIND_BY_USERNAME_AND_PASSWORD;
 import static com.infosupport.util.PasswordUtils.digest;
 
-@Named("UserRepo")
+@ApplicationScoped // since bean-discovery-mode="annotated"
 public class UserRepo extends Repo<User> {
 
     @Override

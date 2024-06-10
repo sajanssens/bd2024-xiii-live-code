@@ -19,7 +19,7 @@ import lombok.experimental.SuperBuilder;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u ORDER BY u.lastName DESC"),
+        @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u"),
         @NamedQuery(name = User.FIND_BY_USERNAME_AND_PASSWORD, query = "SELECT u FROM User u WHERE u.username = :login AND u.password = :password")
 })
 @XmlRootElement
