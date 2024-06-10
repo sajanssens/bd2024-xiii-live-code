@@ -12,7 +12,9 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
 
 import java.util.Set;
@@ -20,13 +22,10 @@ import java.util.Set;
 import static jakarta.persistence.GenerationType.IDENTITY;
 
 @XmlRootElement
-@Data
-@NoArgsConstructor
-@Builder @AllArgsConstructor
+@Getter @Setter @ToString @EqualsAndHashCode(callSuper = true)
 @Entity
-public class Question {
-    @Id @GeneratedValue(strategy = IDENTITY)
-    private int id;
+public class Question extends JPAEntity {
+
     private String text;
     private Integer strikes;
 

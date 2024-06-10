@@ -85,7 +85,11 @@
             <version>3.1.1</version>
             <scope>provided</scope>
         </dependency>
-
+        <dependency>
+            <groupId>io.smallrye</groupId>
+            <artifactId>smallrye-jwt-build</artifactId>
+            <version>4.5.1</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -126,4 +130,11 @@
 
         </plugins>
     </build>
+    <repositories>
+        <repository>
+            <id>maven_central</id>
+            <name>Maven Central</name>
+            <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
+    </repositories>
 </project>

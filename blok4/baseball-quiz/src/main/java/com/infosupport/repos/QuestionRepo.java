@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @ApplicationScoped // since bean-discovery-mode="annotated"
-public class QuestionRepo {
+public class QuestionRepo extends Repo<Question> {
 
     @PersistenceContext(name = "MySQL")
     private EntityManager em;
@@ -41,5 +41,10 @@ public class QuestionRepo {
     @Transactional
     public void delete(int id) {
         em.remove(read(id).orElseThrow(BadRequestException::new));
+    }
+
+    @Override
+    public Class<Question> E() {
+        return Question.class;
     }
 }

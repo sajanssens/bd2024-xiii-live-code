@@ -1,26 +1,24 @@
 package com.infosupport.domain;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import static jakarta.persistence.GenerationType.IDENTITY;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 
 @XmlRootElement
-@Data
-@NoArgsConstructor
-@Builder @AllArgsConstructor
+@SuperBuilder @NoArgsConstructor @AllArgsConstructor
+@Getter @Setter @ToString @EqualsAndHashCode(callSuper = true)
 @Entity
-public class Answer {
+public class Answer extends JPAEntity {
 
-    @Id @GeneratedValue(strategy = IDENTITY)
-    private int id;
     private String text;
     private boolean isCorrect;
 
