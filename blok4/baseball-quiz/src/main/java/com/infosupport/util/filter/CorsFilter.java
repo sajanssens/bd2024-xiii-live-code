@@ -1,12 +1,14 @@
 package com.infosupport.util.filter;
 
+import jakarta.annotation.Priority;
 import jakarta.ws.rs.container.ContainerRequestContext;
 import jakarta.ws.rs.container.ContainerResponseContext;
 import jakarta.ws.rs.container.ContainerResponseFilter;
 import jakarta.ws.rs.core.MultivaluedMap;
 import jakarta.ws.rs.ext.Provider;
 
-@Provider
+@Provider // activate this filter, register in this REST app.
+@Priority(1)
 public class CorsFilter implements ContainerResponseFilter {
 
     @Override
