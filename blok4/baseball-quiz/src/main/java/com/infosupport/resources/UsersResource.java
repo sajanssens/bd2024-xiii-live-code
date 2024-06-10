@@ -2,6 +2,7 @@ package com.infosupport.resources;
 
 import com.infosupport.domain.User;
 import com.infosupport.repos.UserRepo;
+import com.infosupport.util.KeyGenerator;
 import io.smallrye.jwt.build.Jwt;
 import jakarta.inject.Inject;
 import jakarta.persistence.NoResultException;
@@ -10,6 +11,8 @@ import jakarta.ws.rs.NotAuthorizedException;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
+
+import java.security.Key;
 
 import static com.infosupport.util.PasswordUtils.digest;
 import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
@@ -21,6 +24,9 @@ public class UsersResource {
 
     @Inject
     private UserRepo repo;
+
+    @Inject
+    private KeyGenerator keyGenerator;
 
     @POST
     @Produces(APPLICATION_JSON) @Consumes(APPLICATION_JSON)
@@ -49,6 +55,8 @@ public class UsersResource {
     }
 
     private String issueToken(User user) {
+        Key password = keyGenerator.generateKey();
+
         return Jwt.issuer("bramjanssens")
                 .subject("baseball-quiz")
                 // .upn(user.getLastName())
@@ -56,7 +64,7 @@ public class UsersResource {
                 // .groups(user.getRoles())
                 .issuedAt(now())
                 .expiresAt(now().plus(30, MINUTES))
-                .signWithSecret("SecretPw")
+                .signWithSecret(password.toString())
                 // .sign(readPrivateKey("private-key.pem")) // See readme how to generate keys
                 ;
     }
