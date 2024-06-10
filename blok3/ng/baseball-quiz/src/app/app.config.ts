@@ -2,7 +2,7 @@ import {ApplicationConfig, DEFAULT_CURRENCY_CODE, LOCALE_ID, provideZoneChangeDe
 import {provideRouter} from '@angular/router';
 
 import {routes} from './app.routes';
-import {HTTP_INTERCEPTORS, provideHttpClient} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi} from "@angular/common/http";
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
 import {registerLocaleData} from "@angular/common";
 import locale from '@angular/common/locales/nl';
@@ -14,7 +14,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({eventCoalescing: true}),
     provideRouter(routes),
-    provideHttpClient(),
+    provideHttpClient(withInterceptorsFromDi()),
     provideAnimationsAsync(),
     {provide: LOCALE_ID, useValue: 'nl-NL'},
     {provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR'},
