@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
+import {inject, Injectable} from '@angular/core';
+import {HttpEvent, HttpHandler, HttpHandlerFn, HttpInterceptor, HttpRequest} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {UserService} from '../services/user.service';
 
@@ -10,19 +10,28 @@ export class JwtInterceptor implements HttpInterceptor {
   }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.log("intercepting...")
     // add authorization header with jwt if available
     if (this.userService.isLoggedIn()) {
-      console.log("isLoggedIn...")
-
       request = request.clone({
         setHeaders: {
           Authorization: `Bearer ${this.userService.loggedInUser()?.token}`
         }
       });
-      console.log(request)
     }
 
     return next.handle(request);
   }
+}
+
+export function jwtInterceptorFn(req: HttpRequest<any>, next: HttpHandlerFn): Observable<HttpEvent<any>> {
+  const userService = inject(UserService)
+
+  if (userService.isLoggedIn()) {
+    req = req.clone({
+      setHeaders: {
+        Authorization: `Bearer ${userService.loggedInUser()?.token}`
+      }
+    });
+  }
+  return next(req);
 }
