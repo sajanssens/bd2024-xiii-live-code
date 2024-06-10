@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {RouterLink, RouterLinkActive} from "@angular/router";
+import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'bq-menubar',
@@ -12,8 +13,19 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
   styleUrl: './menubar.component.scss'
 })
 export class MenubarComponent {
+  loggedInMessage = 'Not logged in.';
+
+  constructor(private userService: UserService) {
+    userService.loggedInMessage$.subscribe(m =>
+      this.loggedInMessage = m
+    )
+  }
 
   isLoggedIn() {
-    return true;
+    return this.userService.isLoggedIn();
+  }
+
+  logout() {
+    return this.userService.logout();
   }
 }

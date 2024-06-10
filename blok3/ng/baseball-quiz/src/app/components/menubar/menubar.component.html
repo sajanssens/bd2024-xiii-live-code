@@ -3,17 +3,23 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
         <li class="nav-item">
-          <a class="nav-link" routerLink="home" routerLinkActive="active" >Home</a>
+          <a class="nav-link" routerLink="home" routerLinkActive="active">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="contact" routerLinkActive="active" >Contact</a>
+          <a class="nav-link" routerLink="contact" routerLinkActive="active">Contact</a>
         </li>
         @if (isLoggedIn()) {
           <li class="nav-item">
-            <a class="nav-link" routerLink="admin" routerLinkActive="active" >Admin</a>
+            <a class="nav-link" routerLink="admin" routerLinkActive="active">Admin</a>
           </li>
         }
       </ul>
+      @if (!isLoggedIn()) {
+        <a class="nav-link" routerLinkActive="active" routerLink="login">Login</a>
+      }
+      @if (isLoggedIn()) {
+        <a (click)="logout()">Logout</a>
+      }
     </div>
   </div>
 </nav>
