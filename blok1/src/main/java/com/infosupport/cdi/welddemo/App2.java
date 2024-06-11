@@ -4,12 +4,13 @@ import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 
 @ApplicationScoped
-public class App {
+public class App2 {
 
-    @Inject // 1: field injection
     private Screen screen;
 
-    public App() {
+    @Inject // 2: ctor injection
+    public App2(Screen screen) {
+        this.screen = screen;
     }
 
     void start() {

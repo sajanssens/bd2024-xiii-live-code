@@ -19,6 +19,9 @@ public class Start {
         try (WeldContainer weldContainer = new Weld().initialize()) {
             App app = weldContainer.select(App.class).get(); // vanaf nu kan ik in App en zijn dependencies (dao) @Inject gebruiken.
             app.start();
+
+            App3 app3 = weldContainer.select(App3.class).get(); // vanaf nu kan ik in App en zijn dependencies (dao) @Inject gebruiken.
+            app3.start();
         }
     }
 }
