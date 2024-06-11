@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <alternatives>
+        <class>com.example.dependencyinverted.cdi.low.Sms</class>
+    </alternatives>
+    <interceptors></interceptors>
+    <decorators></decorators>
+</beans>

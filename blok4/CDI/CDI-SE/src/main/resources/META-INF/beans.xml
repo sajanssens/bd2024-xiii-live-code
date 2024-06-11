@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    An explicit bean archive is an archive which contains a beans.xml file:
+        - with a version number of 1.1 (or later), with the bean-discovery-mode of all, or,
+        - with no version number, or,
+        - that is an empty file.
+-->
+
+<!-- versie >= 1.1: bean-discovery-mode="annotated"-->
+<!--<beans xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                           http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd" version="1.1"
+       bean-discovery-mode="all"> -->
+
+<!-- geen versie: bean-discovery-mode="all"-->
+<beans>
+    <!--
+    The beans element can have one or more of each of the following children:
+        interceptors
+        decorators
+        alternatives
+    -->
+
+    <!-- Will overwrite default greeting; we'll do this only in src/test/resources -->
+<!--    <alternatives>
+        <class>com.example.cdi.greeters.AltGreeting</class>
+    </alternatives>-->
+<!--    <interceptors>
+        <class>com.example.cdi.interceptor.MethodDurationInterceptor</class>
+    </interceptors>-->
+    <decorators>
+        <class>com.example.cdi.greetings.GreetingDecorator</class>
+    </decorators>
+</beans>

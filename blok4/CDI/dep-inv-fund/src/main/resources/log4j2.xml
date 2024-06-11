@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Properties>
+        <property name="logpattern">[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</property>
+    </Properties>
+
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${logpattern}"/>
+        </Console>
+
+        <!-- append is false for test purposes so the logfiles are automatically overwritten. Don't use this on production. -->
+        <RollingFile name="rollingFile" append="false" fileName="logs/error.log" filePattern="logs/error-%d{yyyy-MM-dd}.%i.log">
+            <PatternLayout pattern="${logpattern}"/>
+            <Policies>
+                <!-- Rolling once a day -->
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <!-- Rolling based on size -->
+                <SizeBasedTriggeringPolicy size="2 KB"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!--<Logger name="com.example" level="ALL" additivity="true">
+            <AppenderRef ref="rollingFile"/>
+        </Logger>-->
+
+        <Logger name="org.hibernate" level="INFO"/>
+
+        <!--<Logger name="org.hibernate.type.descriptor.sql" level="trace"/>-->
+
+        <Root level="DEBUG">
+            <AppenderRef ref="console"/>
+        </Root>
+    </Loggers>
+</Configuration>

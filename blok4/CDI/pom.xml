@@ -2,21 +2,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.infosupport</groupId>
-        <artifactId>bd2024-live-code</artifactId>
+        <artifactId>blok4</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+    <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>blok4</artifactId>
+    <artifactId>CDI</artifactId>
+
     <packaging>pom</packaging>
 
     <modules>
-        <module>javawebapp</module>
-        <module>baseball-quiz</module>
-        <module>CDI</module>
+        <module>CDI-SE</module>
+        <module>dep-inv-fund</module>
     </modules>
-
 
 </project>
