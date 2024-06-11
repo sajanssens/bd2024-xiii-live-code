@@ -86,9 +86,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>io.smallrye</groupId>
-            <artifactId>smallrye-jwt-build</artifactId>
-            <version>4.5.1</version>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
         </dependency>
     </dependencies>
 

@@ -3,7 +3,9 @@ package com.infosupport.resources;
 import com.infosupport.domain.User;
 import com.infosupport.repos.UserRepo;
 import com.infosupport.util.KeyGenerator;
-import io.smallrye.jwt.build.Jwt;
+import com.infosupport.util.filter.NotAuthorized;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 import jakarta.inject.Inject;
 import jakarta.persistence.NoResultException;
 import jakarta.ws.rs.Consumes;
@@ -11,13 +13,17 @@ import jakarta.ws.rs.NotAuthorizedException;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.Context;
+import jakarta.ws.rs.core.UriInfo;
 
 import java.security.Key;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
 
 import static com.infosupport.util.PasswordUtils.digest;
 import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
-import static java.time.Instant.now;
-import static java.time.temporal.ChronoUnit.MINUTES;
+import static java.time.LocalDateTime.now;
 
 @Path("users")
 public class UsersResource {
@@ -28,8 +34,12 @@ public class UsersResource {
     @Inject
     private KeyGenerator keyGenerator;
 
+    @Context
+    private UriInfo uriInfo;
+
     @POST
     @Produces(APPLICATION_JSON) @Consumes(APPLICATION_JSON)
+    @NotAuthorized
     public User register(User u) {
         u.setPassword(digest(u.getPassword()));
         User added = repo.add(u);
@@ -38,6 +48,7 @@ public class UsersResource {
 
     @POST @Path("login")
     @Produces(APPLICATION_JSON) @Consumes(APPLICATION_JSON)
+    @NotAuthorized
     public User login(User input) {
         try {
             String username = input.getUsername();
@@ -45,7 +56,7 @@ public class UsersResource {
 
             User user = repo.findByUsernameAndPassword(username, password);
 
-            String jwt = issueToken(user);
+            String jwt = issueToken(user.getUsername());
             user.setToken(jwt);
 
             return user;
@@ -54,18 +65,20 @@ public class UsersResource {
         }
     }
 
-    private String issueToken(User user) {
+    private String issueToken(String username) {
         Key password = keyGenerator.generateKey();
+        String jwt = Jwts.builder()
+                .setSubject(username)
+                .setIssuer(uriInfo.getAbsolutePath().toString())
+                // .setClaims(...) // roles toevoegen
+                .setIssuedAt(new Date())
+                .setExpiration(toDate(now().plusMinutes(15L)))
+                .signWith(SignatureAlgorithm.HS512, password)
+                .compact();
+        return jwt;
+    }
 
-        return Jwt.issuer("bramjanssens")
-                .subject("baseball-quiz")
-                // .upn(user.getLastName())
-                .claim("username", user.getUsername())
-                // .groups(user.getRoles())
-                .issuedAt(now())
-                .expiresAt(now().plus(30, MINUTES))
-                .signWithSecret(password.toString())
-                // .sign(readPrivateKey("private-key.pem")) // See readme how to generate keys
-                ;
+    private Date toDate(LocalDateTime localDateTime) {
+        return Date.from(localDateTime.atZone(ZoneId.systemDefault()).toInstant());
     }
 }

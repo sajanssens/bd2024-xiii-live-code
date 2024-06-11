@@ -1,7 +1,7 @@
 package com.infosupport.util;
 
-import java.security.Key;
+import javax.crypto.SecretKey;
 
 public interface KeyGenerator {
-    Key generateKey();
+    SecretKey generateKey();
 }

@@ -14,7 +14,9 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({eventCoalescing: true}),
     provideRouter(routes),
-    provideHttpClient(withInterceptors([jwtInterceptorFn])),
+    provideHttpClient(
+      withInterceptors([jwtInterceptorFn])
+    ),
     provideAnimationsAsync(),
     {provide: LOCALE_ID, useValue: 'nl-NL'},
     {provide: DEFAULT_CURRENCY_CODE, useValue: 'EUR'},
