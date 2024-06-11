@@ -31,7 +31,7 @@ public class AuthorizationNeeded implements ContainerRequestFilter {
 
     @Override
     public void filter(ContainerRequestContext req) {
-        if (resourceInfo.getResourceMethod().getAnnotation(NotAuthorized.class) == null) {
+        if (resourceInfo.getResourceMethod().getAnnotation(NotAuthorized.class) != null) {
             return;
         }
 
@@ -51,7 +51,7 @@ public class AuthorizationNeeded implements ContainerRequestFilter {
         try {
             // Validate the token
             SecretKey key = keyGenerator.generateKey();
-            Jwts.parser().setSigningKey(key).parseClaimsJws(token); // valideer het token: is hij geldig?
+            Jwts.parser().verifyWith(key).build().parse(token); // valideer het token: is hij geldig?
             // log.info("#### valid token : " + token);
         } catch (Exception e) {
             // log.warn("#### invalid token : " + token);

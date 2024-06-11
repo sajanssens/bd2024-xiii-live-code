@@ -42,8 +42,7 @@ public class UsersResource {
     @NotAuthorized
     public User register(User u) {
         u.setPassword(digest(u.getPassword()));
-        User added = repo.add(u);
-        return added;
+        return repo.add(u);
     }
 
     @POST @Path("login")
@@ -56,7 +55,7 @@ public class UsersResource {
 
             User user = repo.findByUsernameAndPassword(username, password);
 
-            String jwt = issueToken(user.getUsername());
+            String jwt = issueToken(user);
             user.setToken(jwt);
 
             return user;
@@ -65,15 +64,15 @@ public class UsersResource {
         }
     }
 
-    private String issueToken(String username) {
-        Key password = keyGenerator.generateKey();
+    private String issueToken(User user) {
+        Key key = keyGenerator.generateKey();
         String jwt = Jwts.builder()
-                .setSubject(username)
+                .subject(user.getUsername())
                 .setIssuer(uriInfo.getAbsolutePath().toString())
                 // .setClaims(...) // roles toevoegen
                 .setIssuedAt(new Date())
                 .setExpiration(toDate(now().plusMinutes(15L)))
-                .signWith(SignatureAlgorithm.HS512, password)
+                .signWith(key)
                 .compact();
         return jwt;
     }
