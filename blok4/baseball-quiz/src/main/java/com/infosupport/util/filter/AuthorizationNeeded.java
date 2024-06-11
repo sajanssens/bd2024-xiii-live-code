@@ -45,16 +45,13 @@ public class AuthorizationNeeded implements ContainerRequestFilter {
             throw new NotAuthorizedException("Authorization header must be provided");
         }
 
-        // Extract the token from the HTTP Authorization header
-        String token = authorizationHeader.substring("Bearer".length()).trim();
-
         try {
+            // Extract the token from the HTTP Authorization header
+            String token = authorizationHeader.substring("Bearer".length()).trim();
             // Validate the token
             SecretKey key = keyGenerator.generateKey();
-            Jwts.parser().verifyWith(key).build().parse(token); // valideer het token: is hij geldig?
-            // log.info("#### valid token : " + token);
+            Jwts.parser().verifyWith(key).build().parse(token);
         } catch (Exception e) {
-            // log.warn("#### invalid token : " + token);
             req.abortWith(status(UNAUTHORIZED).build());
         }
     }

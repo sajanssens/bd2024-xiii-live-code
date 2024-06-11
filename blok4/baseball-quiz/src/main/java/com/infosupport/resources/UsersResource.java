@@ -5,7 +5,6 @@ import com.infosupport.repos.UserRepo;
 import com.infosupport.util.KeyGenerator;
 import com.infosupport.util.filter.NotAuthorized;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
 import jakarta.inject.Inject;
 import jakarta.persistence.NoResultException;
 import jakarta.ws.rs.Consumes;
@@ -67,11 +66,12 @@ public class UsersResource {
     private String issueToken(User user) {
         Key key = keyGenerator.generateKey();
         String jwt = Jwts.builder()
-                .subject(user.getUsername())
-                .setIssuer(uriInfo.getAbsolutePath().toString())
-                // .setClaims(...) // roles toevoegen
-                .setIssuedAt(new Date())
-                .setExpiration(toDate(now().plusMinutes(15L)))
+                .issuer(uriInfo.getAbsolutePath().toString())
+                .subject("baseball-quiz")
+                .claim("username", user.getUsername())
+                .claim("roles", user.getRoles()) // roles toevoegen
+                .issuedAt(new Date())
+                .expiration(toDate(now().plusMinutes(15L)))
                 .signWith(key)
                 .compact();
         return jwt;
