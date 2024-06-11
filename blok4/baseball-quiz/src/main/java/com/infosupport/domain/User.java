@@ -1,6 +1,7 @@
 package com.infosupport.domain;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.NamedQueries;
 import jakarta.persistence.NamedQuery;
@@ -17,6 +18,8 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
+import java.util.Set;
+
 @Entity
 @NamedQueries({
         @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u"),
@@ -31,6 +34,9 @@ public class User extends JPAEntity {
 
     public static final String FIND_BY_USERNAME_AND_PASSWORD = "User.findByUsernameAndPassword";
 
+    private String lastName;
+    private String firstName;
+
     @Column(length = 100, nullable = false)
     private String username;
 
@@ -39,4 +45,7 @@ public class User extends JPAEntity {
 
     @Transient // don't store in db
     private String token;
+
+    @ElementCollection
+    private Set<String> roles;
 }

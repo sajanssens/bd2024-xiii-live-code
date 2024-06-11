@@ -1,10 +1,12 @@
 package com.infosupport.h7;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
+@EqualsAndHashCode(callSuper = true)
 @Data @RequiredArgsConstructor
 public class Person extends Human {
     private String name;
