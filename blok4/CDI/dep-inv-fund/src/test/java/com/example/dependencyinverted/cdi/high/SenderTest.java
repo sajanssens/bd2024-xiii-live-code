@@ -3,12 +3,11 @@ package com.example.dependencyinverted.cdi.high;
 import com.example.dependencyinverted.cdi.low.Email;
 import com.example.dependencyinverted.cdi.low.Sms;
 import com.example.dependencyinverted.cdi.util.LoggerProducer;
+import jakarta.inject.Inject;
 import org.jboss.weld.junit5.auto.AddBeanClasses;
 import org.jboss.weld.junit5.auto.EnableAutoWeld;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
-
-import javax.inject.Inject;
 
 import static com.example.dependencyinverted.cdi.util.Util.OK;
 import static org.assertj.core.api.Assertions.assertThat;

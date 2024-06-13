@@ -1,27 +1,18 @@
 package com.infosupport.concurrency;
 
-import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class ThreadLockingDemo {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Counter c = new Counter(0);
+        Counter sharedCounter = new Counter(0);
 
-        Thread t1 = new Thread(() -> {
-            for (int i = 0; i < 100_000; i++) {
-                c.incrementValue();
-            }
-        });
-
-        Thread t2 = new Thread(() -> {
-            for (int i = 0; i < 100_000; i++) {
-                c.incrementValue();
-            }
-        });
+        Thread t1 = new Thread(() -> increment(sharedCounter, 100_000));
+        Thread t2 = new Thread(() -> increment(sharedCounter, 100_000));
 
         long start = System.nanoTime();
+
         t1.start();
         t2.start();
 
@@ -30,13 +21,18 @@ public class ThreadLockingDemo {
 
         long stop = System.nanoTime();
 
-        System.out.println(c.getValue());
-        System.out.println("Took " + (stop - start));
+        System.out.println(sharedCounter.getValue());
+        System.out.println("Took " + (stop - start) / 1000 + " µs.");
+    }
+
+    private static void increment(Counter c, int n) {
+        for (int i = 0; i < n; i++) {
+            c.incrementValue();
+        }
     }
 
     private static class Counter {
         ReentrantReadWriteLock plasketting = new ReentrantReadWriteLock();
-        ReentrantReadWriteLock.ReadLock plaskettingRead = plasketting.readLock();
 
         private int value;
 
@@ -52,7 +48,11 @@ public class ThreadLockingDemo {
         }
 
         public int getValue() {
-            return value;
+            plasketting.readLock().lock();
+            int val = value;
+            plasketting.readLock().unlock();
+
+            return val;
         }
     }
 }
