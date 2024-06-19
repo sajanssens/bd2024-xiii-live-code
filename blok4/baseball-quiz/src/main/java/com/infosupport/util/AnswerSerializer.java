@@ -7,6 +7,9 @@ import jakarta.json.stream.JsonGenerator;
 
 import java.util.Set;
 
+// When you want to customize the way a Set<Answer> is marshalled, i.e. to break
+// the cycle  question -> answers -> question.
+// Or solve this with @JsonbTransient.
 public class AnswerSerializer implements JsonbSerializer<Set<Answer>> {
     @Override
     public void serialize(Set<Answer> answers, JsonGenerator json, SerializationContext ctx) {

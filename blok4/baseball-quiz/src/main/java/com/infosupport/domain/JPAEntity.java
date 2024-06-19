@@ -1,5 +1,6 @@
 package com.infosupport.domain;
 
+import jakarta.json.bind.annotation.JsonbTransient;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -19,6 +20,7 @@ public abstract class JPAEntity {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Integer id;
 
+    @JsonbTransient
     @Version // voor optimistic locking
     protected long version;
 

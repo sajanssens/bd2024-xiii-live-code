@@ -107,6 +107,12 @@
             <artifactId>gson</artifactId>
             <version>2.11.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.eclipse</groupId>
+            <artifactId>yasson</artifactId>
+            <version>3.0.3</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>

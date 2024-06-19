@@ -1,11 +1,10 @@
 package com.infosupport.domain;
 
+import jakarta.json.bind.annotation.JsonbTransient;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,6 +21,6 @@ public class Answer extends JPAEntity {
     private String text;
     private boolean isCorrect;
 
-    @ManyToOne
+    @ManyToOne @JsonbTransient
     private Question question;
 }
