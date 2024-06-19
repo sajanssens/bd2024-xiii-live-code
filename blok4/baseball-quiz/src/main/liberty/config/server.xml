@@ -5,16 +5,47 @@
     <variable name="MYSQL_USE_SSL" defaultValue="true"/>
 
     <httpEndpoint id="defaultHttpEndpoint" httpPort="9080" httpsPort="9443"/>
+    <keyStore id="defaultKeyStore" password="Liberty"/>
+
+    <!-- for admin center -->
+    <administrator-role>
+        <user>admin</user>
+    </administrator-role>
+    <basicRegistry>
+        <user name="Bob" password="bobpassword"/>
+        <user name="Wanda" password="wandapassword"/>
+        <user name="Todd" password="toddpassword"/>
+
+        <group name="managers">
+            <member name="Wanda"/>
+            <member name="Todd"/>
+        </group>
+    </basicRegistry>
 
     <featureManager>
+        <feature>jakartaee-10.0</feature>
         <feature>restfulWS-3.1</feature>
         <feature>jsonb-3.0</feature>
         <feature>xmlBinding-4.0</feature>
-        <feature>mpOpenAPI-3.1</feature>
         <feature>persistence-3.1</feature>
+        <feature>messaging-3.1</feature>
+        <feature>enterpriseBeans-4.0</feature> <!-- for MDB -->
+        <feature>mpOpenAPI-3.1</feature>
+        <feature>jndi-1.0</feature>
         <feature>mpJwt-2.1</feature>
-        <!--<feature>jakartaee-10.0</feature>-->
+        <feature>adminCenter-1.0</feature> <!-- see https://openliberty.io/docs/latest/admin-center.html -->
     </featureManager>
+    <administrator-role>
+        <group>managers</group>
+    </administrator-role>
+
+    <reader-role>
+        <user>Bob</user>
+    </reader-role>
+
+    <remoteFileAccess>
+        <writeDir>${server.config.dir}</writeDir>
+    </remoteFileAccess>
 
     <applicationManager autoExpand="true"/>
 
@@ -31,6 +62,14 @@
         <properties serverName="${MYSQL_HOSTNAME}" portNumber="${MYSQL_PORT}" useSSL="${MYSQL_USE_SSL}"
                     databaseName="baseball-quiz" user="root" password="root" serverTimezone="UTC"/>
     </dataSource>
+
+    <jmsQueue id="testQueue" jndiName="jms/testQueue">
+        <properties.wasJms queueName="testQueue"/>
+    </jmsQueue>
+
+    <jmsActivationSpec id="ConsumerMDB"> <!--syntax: <war-name>/<mdb-name> -->
+        <properties.wasJms destinationRef="testQueue"/>
+    </jmsActivationSpec>
 
 </server>
 
