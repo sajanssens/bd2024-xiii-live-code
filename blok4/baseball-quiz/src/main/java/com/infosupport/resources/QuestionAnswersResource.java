@@ -17,8 +17,8 @@ public class QuestionAnswersResource {
     public List<Answer> getAll() {
         return new ArrayList<>(
                 List.of(
-                        Answer.builder().text("Klopt").isCorrect(true).build(),
-                        Answer.builder().text("Klopt niet").isCorrect(false).build()
+                        Answer.builder().text("Klopt").correct(true).build(),
+                        Answer.builder().text("Klopt niet").correct(false).build()
                 )
         );
     }

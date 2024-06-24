@@ -2,7 +2,7 @@ package com.infosupport.resources;
 
 import com.infosupport.domain.Question;
 import com.infosupport.repos.QuestionRepo;
-import com.infosupport.util.filter.Authorized;
+import com.infosupport.util.filter.NotAuthorized;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
@@ -50,8 +50,9 @@ public class QuestionsResource {
 
     @POST
     @Produces(APPLICATION_JSON) @Consumes(APPLICATION_JSON)
-    // @Authorized
+    @NotAuthorized
     public Question add(Question q) {
+        System.out.println(q);
         return repo.create(q);
     }
 

@@ -19,7 +19,7 @@ import lombok.experimental.SuperBuilder;
 public class Answer extends JPAEntity {
 
     private String text;
-    private boolean isCorrect;
+    private boolean correct;
 
     @ManyToOne @JsonbTransient
     private Question question;
