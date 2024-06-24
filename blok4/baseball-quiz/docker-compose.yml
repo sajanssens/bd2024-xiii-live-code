@@ -7,9 +7,16 @@ services:
       - mysql-data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
-#      MYSQL_DATABASE: baseball-quiz
+    #      MYSQL_DATABASE: baseball-quiz
     ports:
       - "3306:3306"
+  mysql-test:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test-db
+    ports:
+      - "3307:3306"
 
 volumes:
   mysql-data:
