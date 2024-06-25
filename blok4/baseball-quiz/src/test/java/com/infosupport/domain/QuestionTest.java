@@ -10,11 +10,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class QuestionTest {
 
     @Test
-    void whenQuestionWithAnswersIsMarshalledToJsonUsingTheDefaultJsonbImplementationItIsOk() throws Exception {
+    void whenQuestionWithBiDirectionalPolymorphicAnswersIsParsedItIsOk() throws Exception {
         Question question = Question.builder()
                 .text("QQQ")
-                .answer(Answer.builder().text("AAA").correct(true).build())
-                .answer(Answer.builder().text("BBB").correct(false).build())
+                .answer(YesNoAnswer.builder().text("AAA").correct(true).build())
+                .answer(MultiChoiceAnswer.builder().text("BBB").correct(false).build())
                 .build();
 
         try (Jsonb jsonb = JsonbBuilder.create()) {
@@ -27,24 +27,26 @@ class QuestionTest {
 
         String json = """
                 {
-                  "text": "Q",
-                  "answers": [
-                    {
-                      "text": "A",
-                      "correct": true
-                    },
-                    {
-                      "text": "B",
-                      "correct": false
-                    }
-                  ]
-                }
+                   "text": "QQQ",
+                   "answers": [
+                     {
+                       "@answer": "yesno",
+                       "correct": true,
+                       "text": "AAA"
+                     },
+                     {
+                       "@answer": "multi",
+                       "correct": false,
+                       "text": "BBB"
+                     }
+                   ]
+                 }
                 """;
 
         try (Jsonb jsonb = JsonbBuilder.create()) {
             Question q = jsonb.fromJson(json, Question.class);
             System.out.println(q);
-            assertEquals("Q", q.getText());
+            assertEquals("QQQ", q.getText());
             assertEquals(2, q.getAnswers().size());
         }
     }

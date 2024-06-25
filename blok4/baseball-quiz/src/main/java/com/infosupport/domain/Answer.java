@@ -1,6 +1,8 @@
 package com.infosupport.domain;
 
+import jakarta.json.bind.annotation.JsonbSubtype;
 import jakarta.json.bind.annotation.JsonbTransient;
+import jakarta.json.bind.annotation.JsonbTypeInfo;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import jakarta.xml.bind.annotation.XmlRootElement;
@@ -16,11 +18,15 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder @NoArgsConstructor @AllArgsConstructor
 @Getter @Setter @ToString @EqualsAndHashCode(callSuper = true)
 @Entity
-public class Answer extends JPAEntity {
+@JsonbTypeInfo(key = "@answer", value = {
+        @JsonbSubtype(alias = "yesno", type = YesNoAnswer.class),
+        @JsonbSubtype(alias = "multi", type = MultiChoiceAnswer.class),
+})
+public abstract class Answer extends JPAEntity {
 
     private String text;
     private boolean correct;
 
-    @ManyToOne @JsonbTransient
+    @ManyToOne @JsonbTransient @ToString.Exclude
     private Question question;
 }

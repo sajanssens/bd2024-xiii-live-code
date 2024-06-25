@@ -1,6 +1,7 @@
 package com.infosupport.resources;
 
 import com.infosupport.domain.Answer;
+import com.infosupport.domain.YesNoAnswer;
 import jakarta.enterprise.context.Dependent;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Produces;
@@ -17,8 +18,8 @@ public class QuestionAnswersResource {
     public List<Answer> getAll() {
         return new ArrayList<>(
                 List.of(
-                        Answer.builder().text("Klopt").correct(true).build(),
-                        Answer.builder().text("Klopt niet").correct(false).build()
+                        YesNoAnswer.builder().text("Klopt").correct(true).build(),
+                        YesNoAnswer.builder().text("Klopt niet").correct(false).build()
                 )
         );
     }

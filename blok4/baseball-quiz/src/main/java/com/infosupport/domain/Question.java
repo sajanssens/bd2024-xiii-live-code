@@ -13,7 +13,7 @@ import lombok.Setter;
 import lombok.Singular;
 import lombok.ToString;
 
-import java.util.Set;
+import java.util.List;
 
 @XmlRootElement
 @Getter @Setter @ToString @EqualsAndHashCode(callSuper = true)
@@ -25,8 +25,8 @@ public class Question extends JPAEntity {
     private Integer strikes;
 
     @OneToMany(mappedBy = "question", fetch = FetchType.EAGER)
-    @ToString.Exclude
+    // @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @Singular
-    public Set<Answer> answers;
+    public List<Answer> answers;
 }
