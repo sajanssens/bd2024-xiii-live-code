@@ -2,6 +2,7 @@ package com.infosupport.repos;
 
 import com.infosupport.domain.ImportDto;
 import com.infosupport.util.importer.ImporterProducer;
+import jakarta.ejb.Stateless;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 

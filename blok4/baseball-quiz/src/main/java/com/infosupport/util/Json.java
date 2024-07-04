@@ -12,4 +12,8 @@ public final class Json {
     public static String toJson(Object o) {
         return gson.toJson(o);
     }
+
+    public static <T> T fromJson(String s, Class<T> c) {
+        return gson.fromJson(s, c);
+    }
 }

@@ -34,6 +34,8 @@
         <feature>jndi-1.0</feature>
         <feature>mpJwt-2.1</feature>
         <feature>adminCenter-1.0</feature> <!-- see https://openliberty.io/docs/latest/admin-center.html -->
+        <!--        <feature>persistenceContainer-3.1</feature>-->
+        <!--        <feature>bells-1.0</feature>-->
     </featureManager>
     <administrator-role>
         <group>managers</group>
@@ -52,6 +54,13 @@
     <logging traceSpecification="JPA=all"/>
 
     <!--FOR JPA:  ******************************************** -->
+    <!--    to be able to use hibernate instead of eclipselink: -->
+    <!--    <library id="HibernateLib">-->
+    <!--        <fileset dir="${shared.resource.dir}/" includes="hibernate-core*.jar"/>-->
+    <!--    </library>-->
+
+    <!--    <bell libraryRef="HibernateLib"/>-->
+
     <!-- MySQL for production -->
     <library id="MySQLLib">
         <fileset dir="${shared.resource.dir}/" includes="mysql*.jar"/>
@@ -63,12 +72,20 @@
                     databaseName="baseball-quiz" user="root" password="root" serverTimezone="UTC"/>
     </dataSource>
 
-    <jmsQueue id="testQueue" jndiName="jms/testQueue">
-        <properties.wasJms queueName="testQueue"/>
+    <messagingEngine>
+        <queue id="importerQueue"/>
+    </messagingEngine>
+
+    <jmsQueueConnectionFactory jndiName="jms/connectionFactory">
+        <properties.wasJms remoteServerAddress="localhost:7276:BootStrapBasicMessaging"/>
+    </jmsQueueConnectionFactory>
+
+    <jmsQueue id="importerJmsQueue" jndiName="jms/importer">
+        <properties.wasJms queueName="importerQueue"/>
     </jmsQueue>
 
-    <jmsActivationSpec id="ConsumerMDB"> <!--syntax: <war-name>/<mdb-name> -->
-        <properties.wasJms destinationRef="testQueue"/>
+    <jmsActivationSpec id="baseball-quiz/importerMdb"> <!--syntax: <war-name>/<mdb-name> -->
+        <properties.wasJms destinationRef="importerJmsQueue" destinationType="jakarta.jms.Queue"/>
     </jmsActivationSpec>
 
 </server>

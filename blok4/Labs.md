@@ -4,8 +4,8 @@
 	- download OpenLiberty, bekijk de install dir	
 		kies voor de kale kernel versie en bekijk de README.
 		doe dan `server create`
-	- maak een HelloWorld in maven (bijv. uit JavaWEB) en deploy en run op WLP
-		- bewerk de server.xml van defaultServer
+	- maak een HelloWorld in maven en deploy en run op WLP
+		- bewerk de `server.xml` van defaultServer
 		- voer uit `featureUtility installServerFeatures defaultServer`
 		- zet je war in de `dropins` folder
 		- voer uit `server run`
