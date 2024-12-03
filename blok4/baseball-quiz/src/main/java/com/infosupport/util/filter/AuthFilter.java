@@ -21,7 +21,7 @@ import static jakarta.ws.rs.core.Response.status;
 @Provider
 // @Authorized // when using NotAuthorized
 @Priority(Priorities.AUTHENTICATION)
-public class AuthorizationNeeded implements ContainerRequestFilter {
+public class AuthFilter implements ContainerRequestFilter {
 
     @Context
     private ResourceInfo resourceInfo;
